@@ -1,5 +1,19 @@
 // === DocuClaw — Main JS (Stars + Interactions) ===
 
+// --- CSP-safe Google Fonts Loader ---
+(function loadFonts() {
+    var fontLink = document.getElementById('google-fonts');
+    if (fontLink) {
+        if (fontLink.sheet) {
+            fontLink.media = 'all';
+        } else {
+            fontLink.addEventListener('load', function () {
+                fontLink.media = 'all';
+            });
+        }
+    }
+})();
+
 // --- Star Field Background ---
 (function initStars() {
     const container = document.getElementById('stars');
