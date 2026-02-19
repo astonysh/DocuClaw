@@ -1,5 +1,5 @@
 <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="100" cy="100" r="95" fill="#1A202C" />
+
   <!-- Body Behind -->
   <circle cx="100" cy="90" r="60" fill="#EF4444" />
   <!-- Eyes Peeking -->
@@ -11,7 +11,7 @@
   <path d="M75 45Q60 25 45 35" stroke="#EF4444" stroke-width="4" stroke-linecap="round" />
   <path d="M125 45Q140 25 155 35" stroke="#EF4444" stroke-width="4" stroke-linecap="round" />
   <!-- DOCUMENT BIG IN FRONT -->
-  <rect x="60" y="80" width="80" height="90" rx="4" fill="white" stroke="#E2E8F0" stroke-width="2" />
+  <rect x="60" y="80" width="80" height="90" rx="4" fill="white" stroke="#94A3B8" stroke-width="2" />
   <rect x="70" y="95" width="60" height="4" fill="#CBD5E0" />
   <rect x="70" y="110" width="60" height="4" fill="#CBD5E0" />
   <rect x="70" y="125" width="40" height="4" fill="#CBD5E0" />
