@@ -1,0 +1,15 @@
+# Language routes all point to the same SPA index.html
+# The JS i18n system handles language switching client-side
+
+/zh/*  /index.html  200
+/de/*  /index.html  200
+/fr/*  /index.html  200
+/es/*  /index.html  200
+/it/*  /index.html  200
+/ja/*  /index.html  200
+/zh    /index.html  200
+/de    /index.html  200
+/fr    /index.html  200
+/es    /index.html  200
+/it    /index.html  200
+/ja    /index.html  200

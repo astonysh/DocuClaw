@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta -->
+    <title>DocuClaw — Sovereign Document Intelligence for Individuals & Teams</title>
+    <meta name="description"
+        content="DocuClaw is an open-source, local-first, AI-powered document management system. Extract, organize, and archive invoices, receipts, and contracts — 100% on your machine.">
+    <meta name="keywords"
+        content="DocuClaw, document management, AI, local-first, privacy, invoice parser, open source, OCR, sovereign data">
+    <meta name="author" content="OpenClaw Community">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://docuclaw.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="DocuClaw — Sovereign Document Intelligence">
+    <meta property="og:description"
+        content="Open-source, local-first, AI-powered document management. Your invoices. Your contracts. Your data. Your rules.">
+    <meta property="og:url" content="https://docuclaw.com/">
+    <meta property="og:site_name" content="DocuClaw">
+    <meta property="og:image" content="https://docuclaw.com/og-image.png">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="it_IT">
+    <meta property="og:locale:alternate" content="ja_JP">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DocuClaw — Sovereign Document Intelligence">
+    <meta name="twitter:description" content="Open-source, local-first, AI-powered document management.">
+
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en" href="https://docuclaw.com/">
+    <link rel="alternate" hreflang="zh" href="https://docuclaw.com/zh/">
+    <link rel="alternate" hreflang="de" href="https://docuclaw.com/de/">
+    <link rel="alternate" hreflang="fr" href="https://docuclaw.com/fr/">
+    <link rel="alternate" hreflang="es" href="https://docuclaw.com/es/">
+    <link rel="alternate" hreflang="it" href="https://docuclaw.com/it/">
+    <link rel="alternate" hreflang="ja" href="https://docuclaw.com/ja/">
+    <link rel="alternate" hreflang="x-default" href="https://docuclaw.com/">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "DocuClaw",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "macOS, Windows, Linux",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "description": "Open-source, local-first, AI-powered document management system.",
+        "url": "https://docuclaw.com",
+        "license": "https://opensource.org/licenses/MIT",
+        "author": { "@type": "Organization", "name": "OpenClaw Community", "url": "https://openclaw.ai" }
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Stars Background -->
+    <div class="stars" id="stars"></div>
+
+    <!-- Language Switcher -->
+    <nav class="lang-nav" id="lang-nav" aria-label="Language selection">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="zh">中文</button>
+        <button class="lang-btn" data-lang="de">DE</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="it">IT</button>
+        <button class="lang-btn" data-lang="ja">JA</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+        <div class="hero-logo">
+            <svg width="120" height="120" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-label="DocuClaw Logo">
+                <circle cx="100" cy="90" r="60" fill="#EF4444" />
+                <circle cx="80" cy="70" r="7" fill="black" />
+                <circle cx="80" cy="70" r="2.5" fill="#22D3EE" />
+                <circle cx="120" cy="70" r="7" fill="black" />
+                <circle cx="120" cy="70" r="2.5" fill="#22D3EE" />
+                <path d="M75 45Q60 25 45 35" stroke="#EF4444" stroke-width="4" stroke-linecap="round" />
+                <path d="M125 45Q140 25 155 35" stroke="#EF4444" stroke-width="4" stroke-linecap="round" />
+                <rect x="60" y="80" width="80" height="90" rx="4" fill="white" stroke="#94A3B8" stroke-width="2" />
+                <rect x="70" y="95" width="60" height="4" fill="#CBD5E0" />
+                <rect x="70" y="110" width="60" height="4" fill="#CBD5E0" />
+                <rect x="70" y="125" width="40" height="4" fill="#CBD5E0" />
+                <ellipse cx="45" cy="115" rx="18" ry="14" fill="#DC2626" />
+                <ellipse cx="155" cy="115" rx="18" ry="14" fill="#DC2626" />
+            </svg>
+        </div>
+        <h1 class="hero-title">DocuClaw</h1>
+        <p class="hero-tagline" data-i18n="tagline">YOUR DOCUMENTS. YOUR RULES.</p>
+        <p class="hero-desc" data-i18n="hero_desc">Open-source, local-first, AI-powered document intelligence. Extract,
+            organize, and archive invoices, receipts, and contracts — 100% on your machine.</p>
+        <a href="https://github.com/astonysh/DocuClaw" class="hero-cta" target="_blank" rel="noopener">
+            <span data-i18n="cta_github">View on GitHub</span> →
+        </a>
+    </header>
+
+    <!-- Quick Start -->
+    <section class="section" id="quickstart">
+        <h2 class="section-title"><span class="accent">⟩</span> <span data-i18n="quick_start">Quick Start</span></h2>
+        <div class="terminal-card">
+            <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <pre class="terminal-code"><span class="comment"># Clone & install</span>
+<span class="prompt">$</span> git clone https://github.com/astonysh/DocuClaw.git
+<span class="prompt">$</span> cd DocuClaw && pip install -e .
+
+<span class="comment"># Process a document</span>
+<span class="prompt">$</span> docuclaw process \
+    --entity-id "org_mycompany_01" \
+    --country DE \
+    --input ./scans/invoice.png</pre>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="features">
+        <h2 class="section-title"><span class="accent">⟩</span> <span data-i18n="what_it_does">What It Does</span></h2>
+        <div class="features-grid">
+            <div class="feature-card" id="feature-sovereign">
+                <div class="feature-icon">🛡️</div>
+                <h3 data-i18n="feat_sovereign_title">100% Sovereign</h3>
+                <p data-i18n="feat_sovereign_desc">All data stays on YOUR machine. Zero cloud dependency. Zero
+                    telemetry. Your privacy is non-negotiable.</p>
+            </div>
+            <div class="feature-card" id="feature-multi-entity">
+                <div class="feature-icon">🏢</div>
+                <h3 data-i18n="feat_multi_title">Multi-Entity</h3>
+                <p data-i18n="feat_multi_desc">Manage personal docs, company invoices, and team files — all in one
+                    install. Separate or combine as you wish.</p>
+            </div>
+            <div class="feature-card" id="feature-plugins">
+                <div class="feature-icon">🔌</div>
+                <h3 data-i18n="feat_plugin_title">Plugin Architecture</h3>
+                <p data-i18n="feat_plugin_desc">Country-specific parsers snap in like LEGO bricks. Germany, US, China —
+                    extend DocuClaw for any locale.</p>
+            </div>
+            <div class="feature-card" id="feature-markdown">
+                <div class="feature-icon">📝</div>
+                <h3 data-i18n="feat_markdown_title">Markdown-Native</h3>
+                <p data-i18n="feat_markdown_desc">Every document becomes a searchable .md file with structured YAML
+                    frontmatter. Human-readable, version-controllable.</p>
+            </div>
+            <div class="feature-card" id="feature-ai">
+                <div class="feature-icon">🤖</div>
+                <h3 data-i18n="feat_ai_title">AI-Powered Extraction</h3>
+                <p data-i18n="feat_ai_desc">Multimodal LLM extracts structured data from scans, photos, and emails.
+                    Works with Ollama, OpenAI, or any model.</p>
+            </div>
+            <div class="feature-card" id="feature-compliance">
+                <div class="feature-icon">✅</div>
+                <h3 data-i18n="feat_compliance_title">Compliance-Ready</h3>
+                <p data-i18n="feat_compliance_desc">Designed with GoBD (Germany), GDPR, and audit-trail principles baked
+                    in. Enterprise-grade from day one.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture -->
+    <section class="section" id="architecture">
+        <h2 class="section-title"><span class="accent">⟩</span> <span data-i18n="architecture">Architecture</span></h2>
+        <div class="arch-card">
+            <pre class="arch-diagram">
+┌─────────────────────────────────────────────┐
+│                   CLI / API                  │
+├─────────────────────────────────────────────┤
+│               Core Engine                    │
+│  ┌──────────┐  ┌──────────┐  ┌───────────┐ │
+│  │  Schema   │  │ Storage  │  │  Registry │ │
+│  │(Pydantic) │  │  Layer   │  │  (Plugin) │ │
+│  └──────────┘  └──────────┘  └───────────┘ │
+├─────────────────────────────────────────────┤
+│             Parser Plugins                   │
+│  ┌────────┐  ┌────────┐  ┌──────────────┐  │
+│  │ DE 🇩🇪  │  │ US 🇺🇸  │  │ Custom ...  │  │
+│  │Invoice │  │Invoice │  │  Your Parser │  │
+│  └────────┘  └────────┘  └──────────────┘  │
+├─────────────────────────────────────────────┤
+│        Input Adapters (Future)               │
+│  📷 Scanner │ 📧 Email │ 🔗 Webhook │ 🔌 API │
+└─────────────────────────────────────────────┘</pre>
+        </div>
+    </section>
+
+    <!-- Data Schema -->
+    <section class="section" id="schema">
+        <h2 class="section-title"><span class="accent">⟩</span> <span data-i18n="data_contract">The Data Contract</span>
+        </h2>
+        <p class="section-desc" data-i18n="schema_desc">Every document, whether a €10K enterprise invoice or a personal
+            electricity bill, is normalized into a universal Markdown schema with structured YAML frontmatter.</p>
+        <div class="terminal-card">
+            <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <pre class="terminal-code"><span class="comment">---</span>
+<span class="key">id:</span> doc_20260215_a1b2c3d4
+<span class="key">entity_id:</span> "org_acme_01"
+<span class="key">entity_type:</span> "company"
+<span class="key">source_type:</span> physical_mail
+<span class="key">country:</span> DE
+<span class="key">document_type:</span> b2b_invoice
+<span class="key">date_received:</span> "2026-02-15"
+<span class="key">sender_name:</span> "AWS EMEA SARL"
+<span class="key">amount_total:</span> 125.50
+<span class="key">currency:</span> EUR
+<span class="key">status:</span> pending
+<span class="key">tags:</span> [IT_Infrastructure, Q1_Expense]
+<span class="comment">---</span></pre>
+        </div>
+    </section>
+
+    <!-- Pipeline Visualization -->
+    <section class="section" id="pipeline">
+        <h2 class="section-title"><span class="accent">⟩</span> <span data-i18n="how_it_works">How It Works</span></h2>
+        <div class="pipeline">
+            <div class="pipeline-step">
+                <div class="pipeline-icon">📄</div>
+                <div class="pipeline-label" data-i18n="pipe_input">Document Input</div>
+                <div class="pipeline-sub" data-i18n="pipe_input_sub">Scan, email, or API</div>
+            </div>
+            <div class="pipeline-arrow">→</div>
+            <div class="pipeline-step">
+                <div class="pipeline-icon">🤖</div>
+                <div class="pipeline-label" data-i18n="pipe_extract">AI Extraction</div>
+                <div class="pipeline-sub" data-i18n="pipe_extract_sub">LLM-powered parsing</div>
+            </div>
+            <div class="pipeline-arrow">→</div>
+            <div class="pipeline-step">
+                <div class="pipeline-icon">🔍</div>
+                <div class="pipeline-label" data-i18n="pipe_validate">Validation</div>
+                <div class="pipeline-sub" data-i18n="pipe_validate_sub">Pydantic schema check</div>
+            </div>
+            <div class="pipeline-arrow">→</div>
+            <div class="pipeline-step">
+                <div class="pipeline-icon">📁</div>
+                <div class="pipeline-label" data-i18n="pipe_archive">Local Archive</div>
+                <div class="pipeline-sub" data-i18n="pipe_archive_sub">Structured Markdown</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ecosystem -->
+    <section class="section" id="ecosystem">
+        <h2 class="section-title"><span class="accent">⟩</span> <span data-i18n="ecosystem">Part of the OpenClaw
+                Ecosystem</span></h2>
+        <div class="eco-grid">
+            <a href="https://docuclaw.com" class="eco-card active" id="eco-docuclaw">
+                <h3>DocuClaw</h3>
+                <p data-i18n="eco_docuclaw">Sovereign document intelligence & archival</p>
+            </a>
+            <a href="https://openclaw.ai" class="eco-card" target="_blank" rel="noopener" id="eco-openclaw">
+                <h3>OpenClaw</h3>
+                <p data-i18n="eco_openclaw">Personal AI assistant on any platform</p>
+            </a>
+            <a href="https://clawhub.ai" class="eco-card" target="_blank" rel="noopener" id="eco-clawhub">
+                <h3>ClawHub</h3>
+                <p data-i18n="eco_clawhub">Plugin marketplace & community hub</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section class="section" id="roadmap">
+        <h2 class="section-title"><span class="accent">⟩</span> <span data-i18n="roadmap">Roadmap</span></h2>
+        <div class="roadmap-list">
+            <div class="roadmap-item done">
+                <span class="roadmap-check">✓</span>
+                <span data-i18n="road_1">Core schema, storage engine, parser framework, CLI</span>
+            </div>
+            <div class="roadmap-item">
+                <span class="roadmap-check">○</span>
+                <span data-i18n="road_2">Email ingestion adapter (IMAP / POP3)</span>
+            </div>
+            <div class="roadmap-item">
+                <span class="roadmap-check">○</span>
+                <span data-i18n="road_3">Real multimodal LLM integration (Ollama, OpenAI Vision)</span>
+            </div>
+            <div class="roadmap-item">
+                <span class="roadmap-check">○</span>
+                <span data-i18n="road_4">Web UI dashboard (local-only, no cloud)</span>
+            </div>
+            <div class="roadmap-item">
+                <span class="roadmap-check">○</span>
+                <span data-i18n="road_5">GoBD-compliant audit trail with hash chains</span>
+            </div>
+            <div class="roadmap-item">
+                <span class="roadmap-check">○</span>
+                <span data-i18n="road_6">Multi-entity permission model & team collaboration</span>
+            </div>
+            <div class="roadmap-item">
+                <span class="roadmap-check">○</span>
+                <span data-i18n="road_7">Webhook & API ingestion endpoints</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-links">
+            <a href="https://github.com/astonysh/DocuClaw" target="_blank" rel="noopener">GitHub</a>
+            <span class="footer-dot">·</span>
+            <a href="https://openclaw.ai" target="_blank" rel="noopener">OpenClaw</a>
+            <span class="footer-dot">·</span>
+            <a href="https://clawhub.ai" target="_blank" rel="noopener">ClawHub</a>
+            <span class="footer-dot">·</span>
+            <a href="https://github.com/astonysh/DocuClaw/blob/main/LICENSE" target="_blank" rel="noopener"
+                data-i18n="license_link">MIT License</a>
+        </div>
+        <p class="footer-tagline" data-i18n="footer_tagline">Built with 🦞 by the <a href="https://openclaw.ai"
+                target="_blank" rel="noopener">OpenClaw</a> community.</p>
+        <p class="footer-copy" data-i18n="footer_copy">"Your data should work for you, not against you."</p>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

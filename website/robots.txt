@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://docuclaw.com/sitemap.xml
