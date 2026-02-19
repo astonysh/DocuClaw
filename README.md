@@ -190,6 +190,42 @@ class USReceiptParser(BaseDocumentParser):
 
 ---
 
+## 🇪🇺 GDPR & EU Compliance
+
+DocuClaw is architected from the ground up with **EU General Data Protection Regulation (GDPR)** compliance as a core design principle — not an afterthought.
+
+### Why DocuClaw is inherently GDPR-friendly
+
+| GDPR Requirement | How DocuClaw Fulfills It |
+|---|---|
+| **Art. 5(1)(c) — Data Minimization** | Only extracts and stores the structured fields you explicitly define. Zero telemetry, zero usage analytics, zero behavioral tracking. |
+| **Art. 5(1)(f) — Integrity & Confidentiality** | All data processing happens locally on your machine. No network transmission = no interception risk. |
+| **Art. 5(2) — Accountability** | Built-in audit logging with hash-chain integrity verification provides tamper-evident processing records. |
+| **Art. 17 — Right to Erasure** | Data is stored as plain Markdown files on your local filesystem. Deletion is as simple as removing a file — no vendor tickets, no retention policies to fight. |
+| **Art. 25 — Data Protection by Design** | Privacy-first architecture: local-only processing is not a feature toggle, it's the only mode. No cloud fallback exists. |
+| **Art. 44–49 — International Transfers** | No data ever leaves your machine. No third-party servers, no sub-processors, no cross-border transfers. Full compliance by architectural design. |
+
+### GoBD Compliance (Germany) 🇩🇪
+
+For users in Germany, DocuClaw additionally supports **GoBD** (_Grundsätze zur ordnungsmäßigen Führung und Aufbewahrung von Büchern, Aufzeichnungen und Unterlagen in elektronischer Form_):
+
+- **Immutability**: Hash-chain audit trail ensures archived documents cannot be silently altered
+- **Traceability**: Every processing step is logged with timestamps and checksums
+- **Retention**: Local storage with structured dating supports the 10-year retention requirement
+- **Accessibility**: Markdown-native format ensures documents remain human-readable without proprietary software
+
+### No Cloud? No Problem.
+
+Unlike SaaS alternatives, DocuClaw never requires you to:
+- Sign a Data Processing Agreement (DPA) with a third party
+- Conduct a Data Protection Impact Assessment (DPIA) for cloud transfers
+- Maintain Records of Processing Activities (RoPA) for external processors
+- Worry about the adequacy decisions of third-country data flows
+
+> **Your data stays on your machine. Period.** That's the simplest — and most secure — compliance strategy.
+
+---
+
 ## 🗺️ Roadmap
 
 - [x] **Milestone 1**: Core schema, storage engine, parser framework, CLI skeleton
