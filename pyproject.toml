@@ -1,0 +1,116 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "docuclaw"
+version = "0.1.0"
+description = "Universal Sovereign Data Infrastructure for Individuals & Teams — AI-powered document intelligence with 100% local privacy."
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.9"
+authors = [
+    { name = "OpenClaw Contributors", email = "hello@openclaw.ai" },
+]
+keywords = [
+    "document-management",
+    "data-sovereignty",
+    "invoice-parser",
+    "privacy",
+    "ai",
+    "ocr",
+    "pydantic",
+    "markdown",
+    "compliance",
+    "gobd",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Office/Business",
+    "Topic :: Office/Business :: Financial :: Accounting",
+    "Topic :: Text Processing :: Markup :: Markdown",
+    "Typing :: Typed",
+]
+dependencies = [
+    "pydantic>=2.0,<3.0",
+    "pyyaml>=6.0,<7.0",
+    "python-dotenv>=1.0,<2.0",
+    "click>=8.0,<9.0",
+    "rich>=13.0,<14.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "ruff>=0.4",
+    "mypy>=1.10",
+    "pre-commit>=3.7",
+    "types-PyYAML>=6.0",
+]
+llm = [
+    "openai>=1.0",
+    "ollama>=0.2",
+]
+
+[project.scripts]
+docuclaw = "docuclaw.cli:main"
+
+[project.urls]
+Homepage = "https://docuclaw.com"
+Documentation = "https://docs.docuclaw.com"
+Repository = "https://github.com/openclaw-ai/docuclaw"
+Issues = "https://github.com/openclaw-ai/docuclaw/issues"
+Changelog = "https://github.com/openclaw-ai/docuclaw/blob/main/CHANGELOG.md"
+
+# ────────────────────────────── Tool Configuration ──────────────────────────────
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # pyflakes
+    "I",    # isort
+    "N",    # pep8-naming
+    "UP",   # pyupgrade
+    "B",    # flake8-bugbear
+    "SIM",  # flake8-simplify
+    "TCH",  # flake8-type-checking
+    "RUF",  # ruff-specific rules
+]
+ignore = ["E501"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["docuclaw"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[[tool.mypy.overrides]]
+module = "yaml.*"
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short --strict-markers"
+markers = [
+    "integration: marks tests as integration tests (deselect with '-m \"not integration\"')",
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+]
