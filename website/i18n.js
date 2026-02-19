@@ -533,7 +533,11 @@ function setLanguage(lang) {
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (t[key]) {
-            el.innerHTML = t[key];
+            if (el.tagName === 'META') {
+                el.setAttribute('content', t[key]);
+            } else {
+                el.innerHTML = t[key];
+            }
         }
     });
 
@@ -558,19 +562,19 @@ function setLanguage(lang) {
     localStorage.setItem('docuclaw-lang', lang);
 }
 
-// Initialize language from stored pref → URL path → browser lang → 'en'
+// Initialize language from URL path → stored pref → browser lang → 'en'
 function initLanguage() {
-    // 1. Stored preference
-    const stored = localStorage.getItem('docuclaw-lang');
-    if (stored && translations[stored]) {
-        setLanguage(stored);
-        return;
-    }
-
-    // 2. URL path (e.g. /zh/ or /de/)
+    // 1. URL path (e.g. /zh/ or /de/) - This should always take priority
     const pathLang = window.location.pathname.split('/').filter(Boolean)[0];
     if (pathLang && translations[pathLang]) {
         setLanguage(pathLang);
+        return;
+    }
+
+    // 2. Stored preference
+    const stored = localStorage.getItem('docuclaw-lang');
+    if (stored && translations[stored]) {
+        setLanguage(stored);
         return;
     }
 
