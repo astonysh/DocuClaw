@@ -67,10 +67,16 @@ web = [
     "streamlit>=1.30.0",
     "pandas>=2.0",
 ]
+api = [
+    "fastapi>=0.100",
+    "uvicorn>=0.23",
+    "python-multipart>=0.0.6",
+]
 
 [project.scripts]
 docuclaw = "docuclaw.cli:main"
 docuclaw-ui = "docuclaw.ui:main"
+docuclaw-api = "docuclaw.api:main"
 
 [project.urls]
 Homepage = "https://docuclaw.com"
