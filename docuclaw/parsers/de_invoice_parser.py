@@ -100,6 +100,12 @@ class DEInvoiceParser(BaseDocumentParser):
     dates, and generates actionable AI summaries.
     """
 
+    # ── Initialization ───────────────────────────────────────────────────────
+
+    def __init__(self, llm_extractor: Any | None = None) -> None:
+        """Initialize parser, optionally with a real LLM extractor."""
+        self.llm_extractor = llm_extractor
+
     # ── Capabilities ─────────────────────────────────────────────────────────
 
     @property
@@ -158,9 +164,13 @@ class DEInvoiceParser(BaseDocumentParser):
 
         logger.info("Parsing German invoice: %s", resolved_path.name)
 
-        # ── Step 1: Call extraction engine (mocked for M1) ───────────────────
+        # ── Step 1: Call extraction engine ───────────────────────────────────────
         try:
-            extracted = _mock_llm_extract(resolved_path)
+            if getattr(self, "llm_extractor", None) is not None:
+                prompt = self._get_prompt()
+                extracted = self.llm_extractor.extract_structured_data(resolved_path, prompt) # type: ignore
+            else:
+                extracted = _mock_llm_extract(resolved_path)
         except Exception as exc:
             raise ParseError(f"LLM extraction failed for {resolved_path.name}: {exc}") from exc
 
@@ -243,3 +253,18 @@ class DEInvoiceParser(BaseDocumentParser):
         except Exception:
             logger.warning("Could not convert to Decimal: %r", value)
             return None
+
+    def _get_prompt(self) -> str:
+        return (
+            "You are an expert AI extracting data from German invoices. "
+            "Please extract the following information and return ONLY valid JSON: "
+            "sender_name (string), sender_address (string), tax_id_vat (string, USt-IdNr / VAT ID), "
+            "invoice_number (string), amount_net (string, formatted as 1234.56 without currency symbol), "
+            "amount_tax (string, formatted as 1234.56 without currency), "
+            "amount_total (string, formatted as 1234.56 without currency), "
+            "currency (string, e.g. EUR, USD), "
+            "due_date (string, YYYY-MM-DD), "
+            "document_type (string, one of: b2b_invoice, b2c_invoice, receipt), "
+            "raw_text (string, all the text in the document as it appears), "
+            "ai_summary (string, a short German summary of the invoice)."
+        )
