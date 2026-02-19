@@ -292,7 +292,7 @@ All data stays local until **you** decide to export or submit. DocuClaw generate
 - [x] **Milestone 3**: Real multimodal LLM integration (Ollama, OpenAI Vision)
 - [x] **Milestone 4**: Web UI dashboard (local-only, no cloud)
 - [x] **Milestone 5**: GoBD-compliant audit trail with hash chains
-- [ ] **Milestone 6**: Multi-entity permission model & team collaboration
+- [x] **Milestone 6**: Multi-entity permission model & team collaboration
 - [ ] **Milestone 7**: Webhook & API ingestion endpoints
 
 ---
