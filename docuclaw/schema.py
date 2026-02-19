@@ -17,10 +17,8 @@ import uuid
 from datetime import date, datetime
 from decimal import Decimal
 from enum import Enum
-from typing import Optional
 
 from pydantic import BaseModel, Field, field_validator
-
 
 # ──────────────────────────────────────────────────────────────────────────────
 # Enumerations
@@ -134,7 +132,7 @@ class DocuClawDocument(BaseModel):
         ...,
         description="Date the document was received or scanned.",
     )
-    due_date: Optional[date] = Field(
+    due_date: date | None = Field(
         default=None,
         description="Payment or action due date, if applicable.",
     )
@@ -145,28 +143,28 @@ class DocuClawDocument(BaseModel):
         min_length=1,
         description="Name of the sender or counterparty.",
     )
-    sender_address: Optional[str] = Field(
+    sender_address: str | None = Field(
         default=None,
         description="Full postal address of the sender.",
     )
 
     # ── Financial ────────────────────────────────────────────────────────────
-    amount_total: Optional[Decimal] = Field(
+    amount_total: Decimal | None = Field(
         default=None,
         ge=0,
         description="Total amount (gross), if applicable.",
     )
-    amount_net: Optional[Decimal] = Field(
+    amount_net: Decimal | None = Field(
         default=None,
         ge=0,
         description="Net amount before tax, if applicable.",
     )
-    amount_tax: Optional[Decimal] = Field(
+    amount_tax: Decimal | None = Field(
         default=None,
         ge=0,
         description="Tax amount (VAT / sales tax), if applicable.",
     )
-    currency: Optional[str] = Field(
+    currency: str | None = Field(
         default=None,
         min_length=3,
         max_length=3,
@@ -174,19 +172,19 @@ class DocuClawDocument(BaseModel):
     )
 
     # ── Enterprise / Compliance (Optional) ───────────────────────────────────
-    tax_id_vat: Optional[str] = Field(
+    tax_id_vat: str | None = Field(
         default=None,
         description="VAT identification number of the sender.",
     )
-    invoice_number: Optional[str] = Field(
+    invoice_number: str | None = Field(
         default=None,
         description="Invoice or reference number on the document.",
     )
-    cost_center: Optional[str] = Field(
+    cost_center: str | None = Field(
         default=None,
         description="Cost center or department allocation.",
     )
-    purchase_order: Optional[str] = Field(
+    purchase_order: str | None = Field(
         default=None,
         description="Associated purchase order number.",
     )
@@ -204,18 +202,18 @@ class DocuClawDocument(BaseModel):
         default_factory=list,
         description="Relative paths to attachment files (scans, PDFs, etc.).",
     )
-    notes: Optional[str] = Field(
+    notes: str | None = Field(
         default=None,
         description="Free-text notes added by the user.",
     )
 
     # ── Content ──────────────────────────────────────────────────────────────
-    raw_content: Optional[str] = Field(
+    raw_content: str | None = Field(
         default=None,
         description="Raw text extracted via OCR / email body / API payload. "
         "Preserved verbatim for compliance audit and RAG retrieval.",
     )
-    ai_summary: Optional[str] = Field(
+    ai_summary: str | None = Field(
         default=None,
         description="AI-generated actionable summary of the document.",
     )
@@ -229,7 +227,7 @@ class DocuClawDocument(BaseModel):
 
     @field_validator("currency")
     @classmethod
-    def _uppercase_currency(cls, v: Optional[str]) -> Optional[str]:
+    def _uppercase_currency(cls, v: str | None) -> str | None:
         return v.upper() if v else v
 
     # ── Helpers ──────────────────────────────────────────────────────────────

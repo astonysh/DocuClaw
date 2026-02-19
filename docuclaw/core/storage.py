@@ -22,7 +22,6 @@ from __future__ import annotations
 
 import logging
 from pathlib import Path
-from typing import Optional
 
 import yaml
 
@@ -78,8 +77,7 @@ class MarkdownStorageEngine:
 
         if output_path.exists() and not overwrite:
             raise StorageError(
-                f"Document already exists at {output_path}. "
-                "Pass overwrite=True to replace."
+                f"Document already exists at {output_path}. Pass overwrite=True to replace."
             )
 
         markdown_content = self._serialize(document)
@@ -127,7 +125,7 @@ class MarkdownStorageEngine:
         """Check whether a document file already exists on disk."""
         return self._resolve_path(document).exists()
 
-    def list_documents(self, entity_id: Optional[str] = None) -> list[Path]:
+    def list_documents(self, entity_id: str | None = None) -> list[Path]:
         """List all stored ``.md`` document files.
 
         Parameters
@@ -219,8 +217,8 @@ class MarkdownStorageEngine:
             raise StorageError(f"Failed to parse YAML frontmatter: {exc}") from exc
 
         # Extract body sections
-        raw_content: Optional[str] = None
-        ai_summary: Optional[str] = None
+        raw_content: str | None = None
+        ai_summary: str | None = None
 
         if "### Raw Content" in body:
             raw_split = body.split("### Raw Content", 1)[1]

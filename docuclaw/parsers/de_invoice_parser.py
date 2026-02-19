@@ -23,7 +23,7 @@ import re
 from datetime import date
 from decimal import Decimal
 from pathlib import Path
-from typing import Any, Optional
+from typing import Any
 
 from docuclaw.parsers.base import BaseDocumentParser, ParseError
 from docuclaw.schema import (
@@ -122,9 +122,9 @@ class DEInvoiceParser(BaseDocumentParser):
         entity_id: str,
         entity_type: EntityType,
         *,
-        country: Optional[str] = None,
-        source_type: Optional[str] = None,
-        metadata: Optional[dict[str, Any]] = None,
+        country: str | None = None,
+        source_type: str | None = None,
+        metadata: dict[str, Any] | None = None,
     ) -> DocuClawDocument:
         """Parse a German invoice scan into a structured document.
 
@@ -198,9 +198,7 @@ class DEInvoiceParser(BaseDocumentParser):
                 amount_tax=self._to_decimal(extracted.get("amount_tax")),
                 currency=extracted.get("currency", "EUR"),
                 due_date=(
-                    date.fromisoformat(extracted["due_date"])
-                    if extracted.get("due_date")
-                    else None
+                    date.fromisoformat(extracted["due_date"]) if extracted.get("due_date") else None
                 ),
                 cost_center=extra.get("cost_center"),
                 status=DocumentStatus.PENDING,
@@ -210,9 +208,7 @@ class DEInvoiceParser(BaseDocumentParser):
                 ai_summary=extracted.get("ai_summary"),
             )
         except Exception as exc:
-            raise ParseError(
-                f"Failed to construct document from extracted data: {exc}"
-            ) from exc
+            raise ParseError(f"Failed to construct document from extracted data: {exc}") from exc
 
         logger.info(
             "✅ Successfully parsed: %s | Sender: %s | Total: %s %s",
@@ -238,7 +234,7 @@ class DEInvoiceParser(BaseDocumentParser):
         return re.sub(r"\s+", "", vat_id).upper()
 
     @staticmethod
-    def _to_decimal(value: Any) -> Optional[Decimal]:
+    def _to_decimal(value: Any) -> Decimal | None:
         """Safely convert a value to :class:`Decimal`, returning None on failure."""
         if value is None:
             return None

@@ -63,7 +63,8 @@ def parse_args() -> argparse.Namespace:
         description="DocuClaw — Sovereign Document Intelligence CLI",
     )
     parser.add_argument(
-        "--input", "-i",
+        "--input",
+        "-i",
         type=str,
         default=None,
         help="Path to an invoice image or PDF to process.",
@@ -88,7 +89,8 @@ def parse_args() -> argparse.Namespace:
         help=f"Root storage directory (default: {DEFAULT_STORAGE_PATH}).",
     )
     parser.add_argument(
-        "--verbose", "-v",
+        "--verbose",
+        "-v",
         action="store_true",
         help="Enable debug logging.",
     )
@@ -102,14 +104,13 @@ def parse_args() -> argparse.Namespace:
 
 def create_demo_input() -> Path:
     """Create a temporary dummy invoice file for demonstration purposes."""
-    tmp = tempfile.NamedTemporaryFile(
+    with tempfile.NamedTemporaryFile(
         suffix=".png",
         prefix="docuclaw_demo_invoice_",
         delete=False,
-    )
-    tmp.write(b"DUMMY_INVOICE_SCAN_DATA")
-    tmp.close()
-    return Path(tmp.name)
+    ) as tmp:
+        tmp.write(b"DUMMY_INVOICE_SCAN_DATA")
+        return Path(tmp.name)
 
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -194,9 +195,18 @@ def main() -> int:
     doc_table.add_row("Sender", document.sender_name)
     doc_table.add_row("VAT ID", document.tax_id_vat or "—")
     doc_table.add_row("Invoice #", document.invoice_number or "—")
-    doc_table.add_row("Net Amount", f"{document.amount_net} {document.currency}" if document.amount_net else "—")
-    doc_table.add_row("Tax Amount", f"{document.amount_tax} {document.currency}" if document.amount_tax else "—")
-    doc_table.add_row("Total Amount", f"[bold]{document.amount_total} {document.currency}[/bold]" if document.amount_total else "—")
+    doc_table.add_row(
+        "Net Amount", f"{document.amount_net} {document.currency}" if document.amount_net else "—"
+    )
+    doc_table.add_row(
+        "Tax Amount", f"{document.amount_tax} {document.currency}" if document.amount_tax else "—"
+    )
+    doc_table.add_row(
+        "Total Amount",
+        f"[bold]{document.amount_total} {document.currency}[/bold]"
+        if document.amount_total
+        else "—",
+    )
     doc_table.add_row("Due Date", str(document.due_date) if document.due_date else "—")
     doc_table.add_row("Status", document.status)
     doc_table.add_row("Tags", ", ".join(document.tags) if document.tags else "—")

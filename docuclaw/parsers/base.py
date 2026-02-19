@@ -19,7 +19,7 @@ from __future__ import annotations
 import logging
 from abc import ABC, abstractmethod
 from pathlib import Path
-from typing import Any, Optional
+from typing import Any
 
 from docuclaw.schema import DocuClawDocument, EntityType
 
@@ -76,9 +76,9 @@ class BaseDocumentParser(ABC):
         entity_id: str,
         entity_type: EntityType,
         *,
-        country: Optional[str] = None,
-        source_type: Optional[str] = None,
-        metadata: Optional[dict[str, Any]] = None,
+        country: str | None = None,
+        source_type: str | None = None,
+        metadata: dict[str, Any] | None = None,
     ) -> DocuClawDocument:
         """Parse a raw input file and return a validated document.
 
