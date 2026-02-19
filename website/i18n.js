@@ -13,6 +13,7 @@ const langLabels = {
 
 const translations = {
     en: {
+        page_title: "DocuClaw — Sovereign Document Intelligence for Individuals & Teams",
         tagline: "YOUR DOCUMENTS. YOUR RULES.",
         hero_desc: "Open-source, local-first, AI-powered document intelligence. Extract, organize, and archive invoices, receipts, and contracts — 100% on your machine.",
         cta_github: "View on GitHub",
@@ -85,6 +86,7 @@ const translations = {
     },
 
     zh: {
+        page_title: "DocuClaw — 个人与团队的主权文档智能系统",
         tagline: "你的文档。你的规则。",
         hero_desc: "开源、本地优先、AI 驱动的文档智能系统。提取、整理和归档发票、收据和合同 —— 100% 在你的设备上完成。",
         cta_github: "在 GitHub 上查看",
@@ -157,6 +159,7 @@ const translations = {
     },
 
     de: {
+        page_title: "DocuClaw — Souveräne Dokumentenintelligenz für Privatpersonen & Teams",
         tagline: "IHRE DOKUMENTE. IHRE REGELN.",
         hero_desc: "Open-Source, Local-First, KI-gestützte Dokumentenintelligenz. Extrahieren, organisieren und archivieren Sie Rechnungen, Belege und Verträge — 100% auf Ihrem Rechner.",
         cta_github: "Auf GitHub ansehen",
@@ -229,6 +232,7 @@ const translations = {
     },
 
     fr: {
+        page_title: "DocuClaw — Intelligence documentaire souveraine pour particuliers & équipes",
         tagline: "VOS DOCUMENTS. VOS RÈGLES.",
         hero_desc: "Intelligence documentaire open-source, locale d'abord, propulsée par l'IA. Extrayez, organisez et archivez factures, reçus et contrats — 100% sur votre machine.",
         cta_github: "Voir sur GitHub",
@@ -301,6 +305,7 @@ const translations = {
     },
 
     es: {
+        page_title: "DocuClaw — Inteligencia documental soberana para particulares y equipos",
         tagline: "TUS DOCUMENTOS. TUS REGLAS.",
         hero_desc: "Inteligencia documental de código abierto, local-first, impulsada por IA. Extrae, organiza y archiva facturas, recibos y contratos — 100% en tu máquina.",
         cta_github: "Ver en GitHub",
@@ -373,6 +378,7 @@ const translations = {
     },
 
     it: {
+        page_title: "DocuClaw — Intelligenza documentale sovrana per privati e team",
         tagline: "I TUOI DOCUMENTI. LE TUE REGOLE.",
         hero_desc: "Intelligenza documentale open-source, local-first, basata sull'IA. Estrai, organizza e archivia fatture, ricevute e contratti — 100% sulla tua macchina.",
         cta_github: "Vedi su GitHub",
@@ -445,6 +451,7 @@ const translations = {
     },
 
     ja: {
+        page_title: "DocuClaw — 個人とチームのためのソブリンドキュメントインテリジェンス",
         tagline: "あなたのドキュメント。あなたのルール。",
         hero_desc: "オープンソース、ローカルファースト、AI活用のドキュメントインテリジェンス。請求書、領収書、契約書を抽出・整理・アーカイブ — 100%あなたのマシンで。",
         cta_github: "GitHubで見る",
@@ -532,6 +539,11 @@ function setLanguage(lang) {
 
     // Update <html> lang
     document.documentElement.lang = lang;
+
+    // Update page title
+    if (t.page_title) {
+        document.title = t.page_title;
+    }
 
     // Update current language label
     const label = document.getElementById('lang-current-label');
