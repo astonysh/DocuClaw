@@ -11,9 +11,12 @@
         content="DocuClaw is an open-source, local-first, AI-powered document management system. Extract, organize, and archive invoices, receipts, and contracts — 100% on your machine.">
     <meta name="keywords"
         content="DocuClaw, document management, AI, local-first, privacy, invoice parser, open source, OCR, sovereign data">
-    <meta name="author" content="OpenClaw Community">
+    <meta name="author" content="AsTonySh">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://docuclaw.com/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
@@ -22,7 +25,6 @@
         content="Open-source, local-first, AI-powered document management. Your invoices. Your contracts. Your data. Your rules.">
     <meta property="og:url" content="https://docuclaw.com/">
     <meta property="og:site_name" content="DocuClaw">
-    <meta property="og:image" content="https://docuclaw.com/og-image.png">
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="zh_CN">
     <meta property="og:locale:alternate" content="de_DE">
@@ -58,7 +60,7 @@
         "description": "Open-source, local-first, AI-powered document management system.",
         "url": "https://docuclaw.com",
         "license": "https://opensource.org/licenses/MIT",
-        "author": { "@type": "Organization", "name": "OpenClaw Community", "url": "https://openclaw.ai" }
+        "author": { "@type": "Person", "name": "AsTonySh", "url": "https://astonysh.com" }
     }
     </script>
 
@@ -77,15 +79,23 @@
     <!-- Stars Background -->
     <div class="stars" id="stars"></div>
 
-    <!-- Language Switcher -->
-    <nav class="lang-nav" id="lang-nav" aria-label="Language selection">
-        <button class="lang-btn active" data-lang="en">EN</button>
-        <button class="lang-btn" data-lang="zh">中文</button>
-        <button class="lang-btn" data-lang="de">DE</button>
-        <button class="lang-btn" data-lang="fr">FR</button>
-        <button class="lang-btn" data-lang="es">ES</button>
-        <button class="lang-btn" data-lang="it">IT</button>
-        <button class="lang-btn" data-lang="ja">JA</button>
+    <!-- Language Switcher (Dropdown) -->
+    <nav class="lang-switcher" id="lang-switcher" aria-label="Language selection">
+        <button class="lang-current" id="lang-current" aria-haspopup="listbox" aria-expanded="false">
+            <span class="lang-current-label" id="lang-current-label">EN</span>
+            <svg class="lang-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+        </button>
+        <ul class="lang-dropdown" id="lang-dropdown" role="listbox">
+            <li class="lang-option active" data-lang="en" role="option">English</li>
+            <li class="lang-option" data-lang="de" role="option">Deutsch</li>
+            <li class="lang-option" data-lang="fr" role="option">Français</li>
+            <li class="lang-option" data-lang="es" role="option">Español</li>
+            <li class="lang-option" data-lang="it" role="option">Italiano</li>
+            <li class="lang-option" data-lang="ja" role="option">日本語</li>
+            <li class="lang-option" data-lang="zh" role="option">简体中文</li>
+        </ul>
     </nav>
 
     <!-- Hero Section -->
@@ -268,8 +278,7 @@
 
     <!-- Ecosystem -->
     <section class="section" id="ecosystem">
-        <h2 class="section-title"><span class="accent">⟩</span> <span data-i18n="ecosystem">Part of the OpenClaw
-                Ecosystem</span></h2>
+        <h2 class="section-title"><span class="accent">⟩</span> <span data-i18n="ecosystem">Ecosystem</span></h2>
         <div class="eco-grid">
             <a href="https://docuclaw.com" class="eco-card active" id="eco-docuclaw">
                 <h3>DocuClaw</h3>
@@ -333,9 +342,12 @@
             <a href="https://github.com/astonysh/DocuClaw/blob/main/LICENSE" target="_blank" rel="noopener"
                 data-i18n="license_link">MIT License</a>
         </div>
-        <p class="footer-tagline" data-i18n="footer_tagline">Built with 🦞 by the <a href="https://openclaw.ai"
-                target="_blank" rel="noopener">OpenClaw</a> community.</p>
+        <p class="footer-tagline" data-i18n="footer_tagline">Built with 🦞 by <a href="https://astonysh.com"
+                target="_blank" rel="noopener">AsTonySh</a>.</p>
         <p class="footer-copy" data-i18n="footer_copy">"Your data should work for you, not against you."</p>
+        <p class="footer-disclaimer" data-i18n="footer_disclaimer">DocuClaw is an independent project created by <a
+                href="https://astonysh.com" target="_blank" rel="noopener">AsTonySh</a>. It is not affiliated with or
+            endorsed by OpenClaw.</p>
     </footer>
 
     <script src="i18n.js"></script>

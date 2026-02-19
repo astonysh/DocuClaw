@@ -1,4 +1,16 @@
 // === DocuClaw i18n Translations ===
+
+// Display labels for language switcher
+const langLabels = {
+    en: 'EN',
+    zh: '中文',
+    de: 'DE',
+    fr: 'FR',
+    es: 'ES',
+    it: 'IT',
+    ja: 'JA'
+};
+
 const translations = {
     en: {
         tagline: "YOUR DOCUMENTS. YOUR RULES.",
@@ -30,7 +42,7 @@ const translations = {
         pipe_validate_sub: "Pydantic schema check",
         pipe_archive: "Local Archive",
         pipe_archive_sub: "Structured Markdown",
-        ecosystem: "Part of the OpenClaw Ecosystem",
+        ecosystem: "Ecosystem",
         eco_docuclaw: "Sovereign document intelligence & archival",
         eco_openclaw: "Personal AI assistant on any platform",
         eco_clawhub: "Plugin marketplace & community hub",
@@ -43,8 +55,9 @@ const translations = {
         road_6: "Multi-entity permission model & team collaboration",
         road_7: "Webhook & API ingestion endpoints",
         license_link: "MIT License",
-        footer_tagline: 'Built with 🦞 by the <a href="https://openclaw.ai" target="_blank" rel="noopener">OpenClaw</a> community.',
-        footer_copy: '"Your data should work for you, not against you."'
+        footer_tagline: 'Built with 🦞 by <a href="https://astonysh.com" target="_blank" rel="noopener">AsTonySh</a>.',
+        footer_copy: '"Your data should work for you, not against you."',
+        footer_disclaimer: 'DocuClaw is an independent project created by <a href="https://astonysh.com" target="_blank" rel="noopener">AsTonySh</a>. It is not affiliated with or endorsed by OpenClaw.'
     },
 
     zh: {
@@ -77,7 +90,7 @@ const translations = {
         pipe_validate_sub: "Pydantic 模式检查",
         pipe_archive: "本地归档",
         pipe_archive_sub: "结构化 Markdown",
-        ecosystem: "OpenClaw 生态系统",
+        ecosystem: "生态系统",
         eco_docuclaw: "主权文档智能与归档",
         eco_openclaw: "任何平台上的个人 AI 助手",
         eco_clawhub: "插件市场与社区中心",
@@ -90,8 +103,9 @@ const translations = {
         road_6: "多实体权限模型与团队协作",
         road_7: "Webhook 与 API 接入端点",
         license_link: "MIT 许可证",
-        footer_tagline: '由 <a href="https://openclaw.ai" target="_blank" rel="noopener">OpenClaw</a> 社区用 🦞 构建。',
-        footer_copy: '"你的数据应该为你所用，而不是与你为敌。"'
+        footer_tagline: '由 <a href="https://astonysh.com" target="_blank" rel="noopener">AsTonySh</a> 用 🦞 构建。',
+        footer_copy: '"你的数据应该为你所用，而不是与你为敌。"',
+        footer_disclaimer: 'DocuClaw 是由 <a href="https://astonysh.com" target="_blank" rel="noopener">AsTonySh</a> 创建的独立项目，与 OpenClaw 没有任何关联。'
     },
 
     de: {
@@ -109,7 +123,7 @@ const translations = {
         feat_markdown_title: "Markdown-Nativ",
         feat_markdown_desc: "Jedes Dokument wird zu einer durchsuchbaren .md-Datei mit strukturiertem YAML-Frontmatter.",
         feat_ai_title: "KI-Extraktion",
-        feat_ai_desc: "Multimodale LLMs extrahieren strukturierte Daten aus Scans, Fotos und E-Mails. Funktioniert mit Ollama, OpenAI oder jedem Modell.",
+        feat_ai_desc: "Multimodale LLMs extrahieren strukturierte Daten aus Scans, Fotos und E-Mails.",
         feat_compliance_title: "Compliance-Ready",
         feat_compliance_desc: "Entwickelt mit eingebauten GoBD-, DSGVO- und Audit-Trail-Prinzipien. Enterprise-Grade von Tag eins.",
         architecture: "Architektur",
@@ -124,7 +138,7 @@ const translations = {
         pipe_validate_sub: "Pydantic-Schema-Check",
         pipe_archive: "Lokales Archiv",
         pipe_archive_sub: "Strukturiertes Markdown",
-        ecosystem: "Teil des OpenClaw-Ökosystems",
+        ecosystem: "Ökosystem",
         eco_docuclaw: "Souveräne Dokumentenintelligenz & -archivierung",
         eco_openclaw: "Persönlicher KI-Assistent auf jeder Plattform",
         eco_clawhub: "Plugin-Marktplatz & Community-Hub",
@@ -137,8 +151,9 @@ const translations = {
         road_6: "Multi-Entity-Berechtigungsmodell & Teamzusammenarbeit",
         road_7: "Webhook- & API-Aufnahme-Endpunkte",
         license_link: "MIT-Lizenz",
-        footer_tagline: 'Gebaut mit 🦞 von der <a href="https://openclaw.ai" target="_blank" rel="noopener">OpenClaw</a>-Community.',
-        footer_copy: '"Ihre Daten sollten für Sie arbeiten, nicht gegen Sie."'
+        footer_tagline: 'Gebaut mit 🦞 von <a href="https://astonysh.com" target="_blank" rel="noopener">AsTonySh</a>.',
+        footer_copy: '"Ihre Daten sollten für Sie arbeiten, nicht gegen Sie."',
+        footer_disclaimer: 'DocuClaw ist ein unabhängiges Projekt von <a href="https://astonysh.com" target="_blank" rel="noopener">AsTonySh</a>. Es steht in keiner Verbindung zu OpenClaw.'
     },
 
     fr: {
@@ -148,11 +163,11 @@ const translations = {
         quick_start: "Démarrage rapide",
         what_it_does: "Fonctionnalités",
         feat_sovereign_title: "100% Souverain",
-        feat_sovereign_desc: "Toutes les données restent sur VOTRE machine. Zéro dépendance cloud. Zéro télémétrie. Votre vie privée est non négociable.",
+        feat_sovereign_desc: "Toutes les données restent sur VOTRE machine. Zéro dépendance cloud. Zéro télémétrie.",
         feat_multi_title: "Multi-Entité",
         feat_multi_desc: "Gérez documents personnels, factures d'entreprise et fichiers d'équipe — tout en une seule installation.",
         feat_plugin_title: "Architecture Plugin",
-        feat_plugin_desc: "Les parseurs spécifiques par pays s'emboîtent comme des LEGO. Allemagne, États-Unis, Chine — étendez DocuClaw pour toute locale.",
+        feat_plugin_desc: "Les parseurs spécifiques par pays s'emboîtent comme des LEGO.",
         feat_markdown_title: "Markdown-Natif",
         feat_markdown_desc: "Chaque document devient un fichier .md consultable avec un frontmatter YAML structuré.",
         feat_ai_title: "Extraction IA",
@@ -171,7 +186,7 @@ const translations = {
         pipe_validate_sub: "Vérification schéma Pydantic",
         pipe_archive: "Archive Locale",
         pipe_archive_sub: "Markdown structuré",
-        ecosystem: "Partie de l'écosystème OpenClaw",
+        ecosystem: "Écosystème",
         eco_docuclaw: "Intelligence documentaire souveraine",
         eco_openclaw: "Assistant IA personnel sur toute plateforme",
         eco_clawhub: "Marketplace de plugins & hub communautaire",
@@ -179,13 +194,14 @@ const translations = {
         road_1: "Schéma de base, moteur de stockage, framework de parseurs, CLI",
         road_2: "Adaptateur d'ingestion e-mail (IMAP / POP3)",
         road_3: "Intégration LLM multimodal réel (Ollama, OpenAI Vision)",
-        road_4: "Tableau de bord Web UI (local uniquement, sans cloud)",
+        road_4: "Tableau de bord Web UI (local uniquement)",
         road_5: "Piste d'audit conforme GoBD avec chaînes de hachage",
-        road_6: "Modèle de permissions multi-entité & collaboration d'équipe",
+        road_6: "Modèle de permissions multi-entité & collaboration",
         road_7: "Points d'entrée Webhook & API",
         license_link: "Licence MIT",
-        footer_tagline: 'Construit avec 🦞 par la communauté <a href="https://openclaw.ai" target="_blank" rel="noopener">OpenClaw</a>.',
-        footer_copy: '"Vos données devraient travailler pour vous, pas contre vous."'
+        footer_tagline: 'Construit avec 🦞 par <a href="https://astonysh.com" target="_blank" rel="noopener">AsTonySh</a>.',
+        footer_copy: '"Vos données devraient travailler pour vous, pas contre vous."',
+        footer_disclaimer: 'DocuClaw est un projet indépendant créé par <a href="https://astonysh.com" target="_blank" rel="noopener">AsTonySh</a>. Il n\'est pas affilié à OpenClaw.'
     },
 
     es: {
@@ -195,11 +211,11 @@ const translations = {
         quick_start: "Inicio rápido",
         what_it_does: "Qué hace",
         feat_sovereign_title: "100% Soberano",
-        feat_sovereign_desc: "Todos los datos se quedan en TU máquina. Cero dependencia de la nube. Cero telemetría. Tu privacidad no es negociable.",
+        feat_sovereign_desc: "Todos los datos se quedan en TU máquina. Cero dependencia de la nube. Cero telemetría.",
         feat_multi_title: "Multi-Entidad",
         feat_multi_desc: "Gestiona documentos personales, facturas de empresa y archivos de equipo — todo en una sola instalación.",
         feat_plugin_title: "Arquitectura de Plugins",
-        feat_plugin_desc: "Los parsers específicos por país encajan como piezas de LEGO. Alemania, EE.UU., China — extiende DocuClaw para cualquier localidad.",
+        feat_plugin_desc: "Los parsers específicos por país encajan como piezas de LEGO.",
         feat_markdown_title: "Markdown-Nativo",
         feat_markdown_desc: "Cada documento se convierte en un archivo .md buscable con frontmatter YAML estructurado.",
         feat_ai_title: "Extracción con IA",
@@ -218,7 +234,7 @@ const translations = {
         pipe_validate_sub: "Verificación esquema Pydantic",
         pipe_archive: "Archivo Local",
         pipe_archive_sub: "Markdown estructurado",
-        ecosystem: "Parte del ecosistema OpenClaw",
+        ecosystem: "Ecosistema",
         eco_docuclaw: "Inteligencia documental soberana",
         eco_openclaw: "Asistente IA personal en cualquier plataforma",
         eco_clawhub: "Marketplace de plugins y hub comunitario",
@@ -228,11 +244,12 @@ const translations = {
         road_3: "Integración LLM multimodal real (Ollama, OpenAI Vision)",
         road_4: "Panel Web UI (solo local, sin nube)",
         road_5: "Trazabilidad conforme a GoBD con cadenas hash",
-        road_6: "Modelo de permisos multi-entidad y colaboración en equipo",
+        road_6: "Modelo de permisos multi-entidad y colaboración",
         road_7: "Endpoints de ingesta Webhook y API",
         license_link: "Licencia MIT",
-        footer_tagline: 'Construido con 🦞 por la comunidad <a href="https://openclaw.ai" target="_blank" rel="noopener">OpenClaw</a>.',
-        footer_copy: '"Tus datos deberían trabajar para ti, no en tu contra."'
+        footer_tagline: 'Construido con 🦞 por <a href="https://astonysh.com" target="_blank" rel="noopener">AsTonySh</a>.',
+        footer_copy: '"Tus datos deberían trabajar para ti, no en tu contra."',
+        footer_disclaimer: 'DocuClaw es un proyecto independiente creado por <a href="https://astonysh.com" target="_blank" rel="noopener">AsTonySh</a>. No está afiliado a OpenClaw.'
     },
 
     it: {
@@ -242,11 +259,11 @@ const translations = {
         quick_start: "Avvio rapido",
         what_it_does: "Cosa fa",
         feat_sovereign_title: "100% Sovrano",
-        feat_sovereign_desc: "Tutti i dati restano sulla TUA macchina. Zero dipendenza dal cloud. Zero telemetria. La tua privacy non è negoziabile.",
+        feat_sovereign_desc: "Tutti i dati restano sulla TUA macchina. Zero dipendenza dal cloud. Zero telemetria.",
         feat_multi_title: "Multi-Entità",
         feat_multi_desc: "Gestisci documenti personali, fatture aziendali e file del team — tutto in un'unica installazione.",
         feat_plugin_title: "Architettura Plugin",
-        feat_plugin_desc: "I parser specifici per paese si incastrano come mattoncini LEGO. Germania, USA, Cina — estendi DocuClaw per qualsiasi località.",
+        feat_plugin_desc: "I parser specifici per paese si incastrano come mattoncini LEGO.",
         feat_markdown_title: "Markdown-Nativo",
         feat_markdown_desc: "Ogni documento diventa un file .md ricercabile con frontmatter YAML strutturato.",
         feat_ai_title: "Estrazione IA",
@@ -265,7 +282,7 @@ const translations = {
         pipe_validate_sub: "Verifica schema Pydantic",
         pipe_archive: "Archivio Locale",
         pipe_archive_sub: "Markdown strutturato",
-        ecosystem: "Parte dell'ecosistema OpenClaw",
+        ecosystem: "Ecosistema",
         eco_docuclaw: "Intelligenza documentale sovrana",
         eco_openclaw: "Assistente IA personale su qualsiasi piattaforma",
         eco_clawhub: "Marketplace di plugin e hub comunitario",
@@ -273,36 +290,37 @@ const translations = {
         road_1: "Schema base, motore di storage, framework parser, CLI",
         road_2: "Adattatore di ingestione email (IMAP / POP3)",
         road_3: "Integrazione LLM multimodale reale (Ollama, OpenAI Vision)",
-        road_4: "Dashboard Web UI (solo locale, nessun cloud)",
+        road_4: "Dashboard Web UI (solo locale)",
         road_5: "Audit trail conforme GoBD con catene hash",
-        road_6: "Modello di permessi multi-entità e collaborazione di team",
+        road_6: "Modello di permessi multi-entità e collaborazione",
         road_7: "Endpoint di ingestione Webhook e API",
         license_link: "Licenza MIT",
-        footer_tagline: 'Costruito con 🦞 dalla community <a href="https://openclaw.ai" target="_blank" rel="noopener">OpenClaw</a>.',
-        footer_copy: '"I tuoi dati dovrebbero lavorare per te, non contro di te."'
+        footer_tagline: 'Costruito con 🦞 da <a href="https://astonysh.com" target="_blank" rel="noopener">AsTonySh</a>.',
+        footer_copy: '"I tuoi dati dovrebbero lavorare per te, non contro di te."',
+        footer_disclaimer: 'DocuClaw è un progetto indipendente creato da <a href="https://astonysh.com" target="_blank" rel="noopener">AsTonySh</a>. Non è affiliato a OpenClaw.'
     },
 
     ja: {
         tagline: "あなたのドキュメント。あなたのルール。",
-        hero_desc: "オープンソース、ローカルファースト、AIを活用したドキュメントインテリジェンス。請求書、領収書、契約書を抽出・整理・アーカイブ — 100%あなたのマシン上で。",
+        hero_desc: "オープンソース、ローカルファースト、AI活用のドキュメントインテリジェンス。請求書、領収書、契約書を抽出・整理・アーカイブ — 100%あなたのマシンで。",
         cta_github: "GitHubで見る",
         quick_start: "クイックスタート",
         what_it_does: "機能紹介",
         feat_sovereign_title: "100% ソブリン",
-        feat_sovereign_desc: "すべてのデータはあなたのマシンに残ります。クラウド依存ゼロ。テレメトリゼロ。あなたのプライバシーは交渉の余地なし。",
+        feat_sovereign_desc: "すべてのデータはあなたのマシンに。クラウド依存ゼロ。テレメトリゼロ。",
         feat_multi_title: "マルチエンティティ",
-        feat_multi_desc: "個人の書類、会社の請求書、チームファイルを一つのインストールで管理。分離も統合も自由自在。",
+        feat_multi_desc: "個人の書類、会社の請求書、チームファイルを一つのインストールで管理。",
         feat_plugin_title: "プラグインアーキテクチャ",
-        feat_plugin_desc: "国別パーサーがレゴブロックのようにはめ込めます。ドイツ、米国、中国 — あらゆるロケールに対応。",
+        feat_plugin_desc: "国別パーサーがレゴブロックのようにはめ込めます。",
         feat_markdown_title: "Markdownネイティブ",
-        feat_markdown_desc: "すべてのドキュメントが構造化YAML frontmatter付きの検索可能な .md ファイルに変換されます。",
+        feat_markdown_desc: "すべてのドキュメントが構造化YAML frontmatter付きの .md ファイルに。",
         feat_ai_title: "AI駆動の抽出",
-        feat_ai_desc: "マルチモーダルLLMがスキャン、写真、メールから構造化データを抽出します。",
+        feat_ai_desc: "マルチモーダルLLMがスキャン、写真、メールから構造化データを抽出。",
         feat_compliance_title: "コンプライアンス対応",
-        feat_compliance_desc: "GoBD（ドイツ）、GDPR、監査証跡の原則を組み込んで設計。初日からエンタープライズグレード。",
+        feat_compliance_desc: "GoBD、GDPR、監査証跡を組み込み設計。初日からエンタープライズグレード。",
         architecture: "アーキテクチャ",
         data_contract: "データ契約",
-        schema_desc: "すべてのドキュメントは構造化YAMLフロントマター付きのユニバーサルMarkdownスキーマに正規化されます。",
+        schema_desc: "すべてのドキュメントは構造化YAML付きのユニバーサルMarkdownスキーマに正規化されます。",
         how_it_works: "仕組み",
         pipe_input: "ドキュメント入力",
         pipe_input_sub: "スキャン、メール、API",
@@ -312,33 +330,23 @@ const translations = {
         pipe_validate_sub: "Pydanticスキーマチェック",
         pipe_archive: "ローカルアーカイブ",
         pipe_archive_sub: "構造化Markdown",
-        ecosystem: "OpenClawエコシステムの一部",
-        eco_docuclaw: "ソブリンドキュメントインテリジェンスとアーカイブ",
-        eco_openclaw: "あらゆるプラットフォームで使えるパーソナルAIアシスタント",
-        eco_clawhub: "プラグインマーケットプレイス＆コミュニティハブ",
+        ecosystem: "エコシステム",
+        eco_docuclaw: "ソブリンドキュメントインテリジェンス",
+        eco_openclaw: "あらゆるプラットフォームのパーソナルAIアシスタント",
+        eco_clawhub: "プラグインマーケットプレイス＆コミュニティ",
         roadmap: "ロードマップ",
         road_1: "コアスキーマ、ストレージエンジン、パーサーフレームワーク、CLI",
         road_2: "メール取り込みアダプター（IMAP / POP3）",
-        road_3: "実際のマルチモーダルLLM統合（Ollama、OpenAI Vision）",
-        road_4: "Web UIダッシュボード（ローカルのみ、クラウドなし）",
+        road_3: "マルチモーダルLLM統合（Ollama、OpenAI Vision）",
+        road_4: "Web UIダッシュボード（ローカルのみ）",
         road_5: "GoBD準拠のハッシュチェーン監査証跡",
         road_6: "マルチエンティティ権限モデルとチームコラボレーション",
         road_7: "Webhook & API取り込みエンドポイント",
         license_link: "MITライセンス",
-        footer_tagline: '<a href="https://openclaw.ai" target="_blank" rel="noopener">OpenClaw</a>コミュニティが🦞で構築。',
-        footer_copy: '"あなたのデータは、あなたのために働くべきだ。"'
+        footer_tagline: '<a href="https://astonysh.com" target="_blank" rel="noopener">AsTonySh</a>が🦞で構築。',
+        footer_copy: '"あなたのデータは、あなたのために働くべきだ。"',
+        footer_disclaimer: 'DocuClawは<a href="https://astonysh.com" target="_blank" rel="noopener">AsTonySh</a>による独立プロジェクトです。OpenClawとは提携・関連はありません。'
     }
-};
-
-// Language metadata for <html> lang attribute
-const langMeta = {
-    en: { lang: 'en', dir: 'ltr' },
-    zh: { lang: 'zh', dir: 'ltr' },
-    de: { lang: 'de', dir: 'ltr' },
-    fr: { lang: 'fr', dir: 'ltr' },
-    es: { lang: 'es', dir: 'ltr' },
-    it: { lang: 'it', dir: 'ltr' },
-    ja: { lang: 'ja', dir: 'ltr' }
 };
 
 // Apply translations
@@ -350,49 +358,79 @@ function setLanguage(lang) {
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (t[key]) {
-            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-                el.placeholder = t[key];
-            } else {
-                el.innerHTML = t[key];
-            }
+            el.innerHTML = t[key];
         }
     });
 
-    // Update lang attribute
-    const meta = langMeta[lang];
-    document.documentElement.lang = meta.lang;
-    document.documentElement.dir = meta.dir;
+    // Update <html> lang
+    document.documentElement.lang = lang;
 
-    // Update active button
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.lang === lang);
+    // Update current language label
+    const label = document.getElementById('lang-current-label');
+    if (label) label.textContent = langLabels[lang] || lang.toUpperCase();
+
+    // Update active state in dropdown
+    document.querySelectorAll('.lang-option').forEach(opt => {
+        opt.classList.toggle('active', opt.dataset.lang === lang);
     });
 
     // Save preference
     localStorage.setItem('docuclaw-lang', lang);
 }
 
-// Initialize language from stored preference or browser
+// Initialize language from stored pref → URL path → browser lang → 'en'
 function initLanguage() {
+    // 1. Stored preference
     const stored = localStorage.getItem('docuclaw-lang');
     if (stored && translations[stored]) {
         setLanguage(stored);
         return;
     }
 
-    // Detect browser language
-    const nav = navigator.language || navigator.userLanguage;
-    const short = nav.split('-')[0].toLowerCase();
-    if (translations[short]) {
-        setLanguage(short);
-    } else {
-        setLanguage('en');
+    // 2. URL path (e.g. /zh/ or /de/)
+    const pathLang = window.location.pathname.split('/').filter(Boolean)[0];
+    if (pathLang && translations[pathLang]) {
+        setLanguage(pathLang);
+        return;
     }
+
+    // 3. Browser language
+    const navLangs = navigator.languages || [navigator.language || navigator.userLanguage || 'en'];
+    for (const navLang of navLangs) {
+        const short = navLang.split('-')[0].toLowerCase();
+        if (translations[short]) {
+            setLanguage(short);
+            return;
+        }
+    }
+
+    // 4. Default to English
+    setLanguage('en');
 }
 
-// Bind language buttons
-document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+// Bind dropdown options
+document.querySelectorAll('.lang-option').forEach(opt => {
+    opt.addEventListener('click', (e) => {
+        e.stopPropagation();
+        setLanguage(opt.dataset.lang);
+        // Close dropdown on mobile after selection
+        document.getElementById('lang-switcher').classList.remove('open');
+    });
+});
+
+// Toggle dropdown on tap (for touch devices)
+const langCurrentBtn = document.getElementById('lang-current');
+if (langCurrentBtn) {
+    langCurrentBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const switcher = document.getElementById('lang-switcher');
+        switcher.classList.toggle('open');
+    });
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', () => {
+    document.getElementById('lang-switcher').classList.remove('open');
 });
 
 // Init
