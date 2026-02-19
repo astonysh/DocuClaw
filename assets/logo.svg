@@ -1,18 +1,25 @@
 <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Circular Background -->
-  <circle cx="100" cy="100" r="90" fill="#1A1A1A"/>
+  <!-- Clean White Background -->
+  <rect width="200" height="200" fill="white"/>
   
-  <!-- Document Representation -->
-  <rect x="70" y="50" width="60" height="80" rx="4" fill="#E0E0E0"/>
-  <path d="M70 60H130M70 80H110M70 100H120" stroke="#1A1A1A" stroke-width="4" stroke-linecap="round"/>
-  
-  <!-- Lobster Claw (Futuristic/Minimal) -->
-  <path d="M120 130C140 130 160 110 160 80C160 50 145 40 135 40L130 60C140 60 145 70 145 80C145 100 135 115 120 115V130Z" fill="#FF6B6B"/>
-  <path d="M110 140C90 140 70 120 70 90C70 60 85 50 95 50L100 70C90 70 85 80 85 90C85 110 95 125 110 125V140Z" fill="#FF6B6B"/>
-  
-  <!-- Accent Scan Line -->
-  <line x1="60" y1="90" x2="140" y2="90" stroke="#4ECDC4" stroke-width="2" stroke-dasharray="4 4">
-    <animate attributeName="y1" values="60;120;60" dur="3s" repeatCount="indefinite" />
-    <animate attributeName="y2" values="60;120;60" dur="3s" repeatCount="indefinite" />
-  </line>
+  <!-- The Document (Held behind the claw) -->
+  <rect x="65" y="45" width="70" height="90" rx="4" fill="#F0F0F0" stroke="#CED4DA" stroke-width="2"/>
+  <rect x="75" y="60" width="50" height="2" fill="#ADB5BD"/>
+  <rect x="75" y="75" width="50" height="2" fill="#ADB5BD"/>
+  <rect x="75" y="90" width="30" height="2" fill="#ADB5BD"/>
+
+  <!-- Iconic Lobster Claw (Recognizable Shape) -->
+  <g id="lobster-claw" transform="translate(40, 60)">
+    <!-- Main Claw Body -->
+    <path d="M60 100C30 100 10 80 10 50C10 20 30 0 60 0L80 20C70 20 60 30 60 50C60 70 70 80 80 80L60 100Z" fill="#FF4D4D"/>
+    <!-- Claw "Pincer" (Opposing part) -->
+    <path d="M70 10C90 -10 120 0 120 30C120 45 110 55 90 55L70 40V10Z" fill="#FF4D4D"/>
+    <!-- Smaller Pincer -->
+    <path d="M70 90C90 110 120 100 120 70C120 55 110 45 90 45L70 60V90Z" fill="#FF4D4D"/>
+    <!-- Joints -->
+    <rect x="50" y="40" width="15" height="20" rx="5" fill="#D63031"/>
+  </g>
+
+  <!-- Accent Circle for Focus -->
+  <circle cx="100" cy="100" r="85" stroke="#001F3F" stroke-width="2" stroke-dasharray="8 8" opacity="0.2"/>
 </svg>
