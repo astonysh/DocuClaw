@@ -12,7 +12,7 @@
   <a href="https://github.com/openclaw-ai/docuclaw/actions"><img src="https://img.shields.io/github/actions/workflow/status/openclaw-ai/docuclaw/ci.yml?branch=main&style=flat-square" alt="CI"></a>
   <a href="https://pypi.org/project/docuclaw/"><img src="https://img.shields.io/pypi/v/docuclaw?style=flat-square&color=blue" alt="PyPI"></a>
   <a href="https://pypi.org/project/docuclaw/"><img src="https://img.shields.io/pypi/pyversions/docuclaw?style=flat-square" alt="Python"></a>
-  <a href="https://github.com/openclaw-ai/docuclaw/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-green?style=flat-square" alt="Licenza"></a>
+  <a href="https://github.com/openclaw-ai/docuclaw/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="Licenza"></a>
   <a href="https://openclaw.ai"><img src="https://img.shields.io/badge/ecosystem-OpenClaw.ai-purple?style=flat-square" alt="OpenClaw"></a>
 </p>
 
@@ -73,7 +73,7 @@ status: pending
 
 ## 📄 Licenza
 
-Rilasciato sotto licenza [Apache 2.0](LICENSE). Usalo liberamente. Sii padrone dei tuoi dati.
+Rilasciato sotto licenza [MIT License](LICENSE). Usalo liberamente. Sii padrone dei tuoi dati.
 
 ---
 

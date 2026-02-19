@@ -7,7 +7,7 @@ name = "docuclaw"
 version = "0.1.0"
 description = "Universal Sovereign Data Infrastructure for Individuals & Teams — AI-powered document intelligence with 100% local privacy."
 readme = "README.md"
-license = { text = "Apache-2.0" }
+license = { text = "MIT" }
 requires-python = ">=3.9"
 authors = [
     { name = "OpenClaw Contributors", email = "hello@openclaw.ai" },
