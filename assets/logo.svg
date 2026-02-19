@@ -1,0 +1,18 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Circular Background -->
+  <circle cx="100" cy="100" r="90" fill="#1A1A1A"/>
+  
+  <!-- Document Representation -->
+  <rect x="70" y="50" width="60" height="80" rx="4" fill="#E0E0E0"/>
+  <path d="M70 60H130M70 80H110M70 100H120" stroke="#1A1A1A" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Lobster Claw (Futuristic/Minimal) -->
+  <path d="M120 130C140 130 160 110 160 80C160 50 145 40 135 40L130 60C140 60 145 70 145 80C145 100 135 115 120 115V130Z" fill="#FF6B6B"/>
+  <path d="M110 140C90 140 70 120 70 90C70 60 85 50 95 50L100 70C90 70 85 80 85 90C85 110 95 125 110 125V140Z" fill="#FF6B6B"/>
+  
+  <!-- Accent Scan Line -->
+  <line x1="60" y1="90" x2="140" y2="90" stroke="#4ECDC4" stroke-width="2" stroke-dasharray="4 4">
+    <animate attributeName="y1" values="60;120;60" dur="3s" repeatCount="indefinite" />
+    <animate attributeName="y2" values="60;120;60" dur="3s" repeatCount="indefinite" />
+  </line>
+</svg>

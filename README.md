@@ -1,6 +1,7 @@
 <p align="center">
-  <img src="https://docuclaw.com/logo.svg" alt="DocuClaw Logo" width="120" />
+  <img src="assets/logo.svg" alt="DocuClaw Logo" width="160" />
 </p>
+
 
 <h1 align="center">DocuClaw</h1>
 
