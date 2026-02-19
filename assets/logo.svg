@@ -1,25 +1,21 @@
 <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Clean White Background -->
-  <rect width="200" height="200" fill="white"/>
-  
-  <!-- The Document (Held behind the claw) -->
-  <rect x="65" y="45" width="70" height="90" rx="4" fill="#F0F0F0" stroke="#CED4DA" stroke-width="2"/>
-  <rect x="75" y="60" width="50" height="2" fill="#ADB5BD"/>
-  <rect x="75" y="75" width="50" height="2" fill="#ADB5BD"/>
-  <rect x="75" y="90" width="30" height="2" fill="#ADB5BD"/>
-
-  <!-- Iconic Lobster Claw (Recognizable Shape) -->
-  <g id="lobster-claw" transform="translate(40, 60)">
-    <!-- Main Claw Body -->
-    <path d="M60 100C30 100 10 80 10 50C10 20 30 0 60 0L80 20C70 20 60 30 60 50C60 70 70 80 80 80L60 100Z" fill="#FF4D4D"/>
-    <!-- Claw "Pincer" (Opposing part) -->
-    <path d="M70 10C90 -10 120 0 120 30C120 45 110 55 90 55L70 40V10Z" fill="#FF4D4D"/>
-    <!-- Smaller Pincer -->
-    <path d="M70 90C90 110 120 100 120 70C120 55 110 45 90 45L70 60V90Z" fill="#FF4D4D"/>
-    <!-- Joints -->
-    <rect x="50" y="40" width="15" height="20" rx="5" fill="#D63031"/>
-  </g>
-
-  <!-- Accent Circle for Focus -->
-  <circle cx="100" cy="100" r="85" stroke="#001F3F" stroke-width="2" stroke-dasharray="8 8" opacity="0.2"/>
+  <circle cx="100" cy="100" r="95" fill="#1A202C" />
+  <!-- Body Behind -->
+  <circle cx="100" cy="90" r="60" fill="#EF4444" />
+  <!-- Eyes Peeking -->
+  <circle cx="80" cy="70" r="7" fill="black" />
+  <circle cx="80" cy="70" r="2.5" fill="#22D3EE" />
+  <circle cx="120" cy="70" r="7" fill="black" />
+  <circle cx="120" cy="70" r="2.5" fill="#22D3EE" />
+  <!-- Antennas -->
+  <path d="M75 45Q60 25 45 35" stroke="#EF4444" stroke-width="4" stroke-linecap="round" />
+  <path d="M125 45Q140 25 155 35" stroke="#EF4444" stroke-width="4" stroke-linecap="round" />
+  <!-- DOCUMENT BIG IN FRONT -->
+  <rect x="60" y="80" width="80" height="90" rx="4" fill="white" stroke="#E2E8F0" stroke-width="2" />
+  <rect x="70" y="95" width="60" height="4" fill="#CBD5E0" />
+  <rect x="70" y="110" width="60" height="4" fill="#CBD5E0" />
+  <rect x="70" y="125" width="40" height="4" fill="#CBD5E0" />
+  <!-- Claws Holding -->
+  <ellipse cx="45" cy="115" rx="18" ry="14" fill="#DC2626" />
+  <ellipse cx="155" cy="115" rx="18" ry="14" fill="#DC2626" />
 </svg>
