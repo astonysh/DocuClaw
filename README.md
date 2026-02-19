@@ -288,7 +288,7 @@ All data stays local until **you** decide to export or submit. DocuClaw generate
 ## 🗺️ Roadmap
 
 - [x] **Milestone 1**: Core schema, storage engine, parser framework, CLI skeleton
-- [ ] **Milestone 2**: Email ingestion adapter (IMAP/POP3)
+- [x] **Milestone 2**: Email ingestion adapter (IMAP/POP3)
 - [ ] **Milestone 3**: Real multimodal LLM integration (Ollama, OpenAI Vision)
 - [ ] **Milestone 4**: Web UI dashboard (local-only, no cloud)
 - [ ] **Milestone 5**: GoBD-compliant audit trail with hash chains
