@@ -20,7 +20,10 @@ and future GoBD-style immutability constraints (append-only directories).
 
 from __future__ import annotations
 
+import hashlib
+import json
 import logging
+from datetime import datetime, timezone
 from pathlib import Path
 
 import yaml
@@ -88,6 +91,8 @@ class MarkdownStorageEngine:
         except OSError as exc:
             raise StorageError(f"Failed to write document: {exc}") from exc
 
+        self._append_audit_log(document.id, markdown_content, "CREATE" if not overwrite else "UPDATE")
+
         logger.info("Document saved: %s  →  %s", document.id, output_path)
         return output_path
 
@@ -142,6 +147,44 @@ class MarkdownStorageEngine:
         if not search_root.exists():
             return []
         return sorted(search_root.rglob("*.md"))
+
+    def _append_audit_log(self, document_id: str, content: str, operation: str) -> None:
+        """Append an entry to the GoBD-compliant hash-chain audit log."""
+        audit_file = self._base_path / "audit_log.jsonl"
+        content_hash = hashlib.sha256(content.encode("utf-8")).hexdigest()
+
+        previous_hash = "GENESIS"
+        if audit_file.exists():
+            # Get the last line
+            with open(audit_file, "rb") as f:
+                try:
+                    f.seek(-2, 2)
+                    while f.read(1) != b"\n":
+                        f.seek(-2, 1)
+                    last_line = f.readline().decode()
+                    last_entry = json.loads(last_line)
+                    previous_hash = last_entry["entry_hash"]
+                except Exception:
+                    # In case file is empty or formatted strangely, fallback to reading all
+                    pass
+
+        timestamp = datetime.now(timezone.utc).isoformat()
+
+        # entry_hash = hash(timestamp + operation + document_id + content_hash + previous_hash)
+        payload = f"{timestamp}|{operation}|{document_id}|{content_hash}|{previous_hash}"
+        entry_hash = hashlib.sha256(payload.encode("utf-8")).hexdigest()
+
+        entry = {
+            "timestamp": timestamp,
+            "operation": operation,
+            "document_id": document_id,
+            "content_hash": content_hash,
+            "previous_hash": previous_hash,
+            "entry_hash": entry_hash,
+        }
+
+        with open(audit_file, "a", encoding="utf-8") as f:
+            f.write(json.dumps(entry) + "\n")
 
     # ── Internal Helpers ─────────────────────────────────────────────────────
 
