@@ -20,9 +20,9 @@
     --text-secondary: #8B95A8;
     --text-muted: #4A5568;
 
-    --accent: #EF4444;
-    --accent-soft: rgba(239, 68, 68, 0.15);
-    --accent-glow: rgba(239, 68, 68, 0.4);
+    --accent: #E53E3E;
+    --accent-soft: rgba(229, 62, 62, 0.15);
+    --accent-glow: rgba(229, 62, 62, 0.4);
 
     --cyan: #22D3EE;
 
@@ -342,7 +342,7 @@ a:hover {
 }
 
 .terminal-code .comment {
-    color: #8B95A8;
+    color: #A0AEC0;
     font-style: italic;
 }
 
@@ -592,14 +592,14 @@ a:hover {
 }
 
 .footer-copy {
-    color: var(--text-muted);
+    color: var(--text-secondary);
     font-size: 0.8rem;
     font-style: italic;
     margin-bottom: 16px;
 }
 
 .footer-disclaimer {
-    color: var(--text-muted);
+    color: var(--text-secondary);
     font-size: 0.75rem;
     line-height: 1.6;
     max-width: 500px;
@@ -609,7 +609,8 @@ a:hover {
 }
 
 .footer-disclaimer a {
-    color: var(--text-secondary);
+    color: var(--text-primary);
+    text-decoration: underline !important;
 }
 
 .footer-disclaimer a:hover {
