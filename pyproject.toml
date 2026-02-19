@@ -63,9 +63,14 @@ llm = [
     "openai>=1.0",
     "ollama>=0.2",
 ]
+web = [
+    "streamlit>=1.30.0",
+    "pandas>=2.0",
+]
 
 [project.scripts]
 docuclaw = "docuclaw.cli:main"
+docuclaw-ui = "docuclaw.ui:main"
 
 [project.urls]
 Homepage = "https://docuclaw.com"
