@@ -226,6 +226,65 @@ Unlike SaaS alternatives, DocuClaw never requires you to:
 
 ---
 
+## 🤖 AI-Powered Output — From Archive to Action
+
+DocuClaw doesn't just archive your documents — it turns them into an **actionable knowledge base**. Through AI agent integration (via OpenClaw or any compatible LLM agent), your structured Markdown data becomes a living system that can answer questions, automate workflows, and feed directly into the tools you already use.
+
+### 💬 Ask Your Documents
+
+Talk to your document archive like you'd talk to a colleague:
+
+```
+You:    "How much did I spend on AWS in Q4 2025?"
+Agent:  "Based on 3 invoices archived in DocuClaw, your total AWS spend
+         in Q4 2025 was €387.42 (Oct: €125.50, Nov: €131.88, Dec: €130.04)."
+
+You:    "When does my office lease expire?"
+Agent:  "Your lease contract (doc_20240301_lease) shows an expiration date
+         of March 31, 2027, with a 3-month notice period starting Jan 1, 2027."
+```
+
+Because documents are stored as structured Markdown with YAML frontmatter, any LLM or RAG pipeline can instantly query, filter, and reason over your entire archive — **without sending data to the cloud**.
+
+### 📅 Calendar, Reminders & To-Do Lists
+
+Auto-extract actionable dates and deadlines from your documents:
+
+| Source Document | Auto-Generated Action |
+|---|---|
+| Invoice with due date | 📅 Calendar event: "Pay AWS invoice €125.50" on Feb 28 |
+| Contract with renewal clause | ⏰ Reminder: "Lease renewal notice deadline" 90 days before expiry |
+| Insurance policy | ✅ To-Do: "Review and renew car insurance by April 15" |
+| Quarterly VAT summary | 📋 Task: "Submit Q1 VAT return — total: €2,340.00" |
+
+Push these directly to Apple Calendar, Google Calendar, Todoist, Things, Notion, or any task manager via standard APIs.
+
+### 🧾 Tax Filing & Financial Reports
+
+Generate tax-ready outputs directly from your archived documents:
+
+- **Expense Summaries**: Categorized by type, vendor, tax rate, and period
+- **VAT/GST Reports**: Pre-calculated input tax, output tax, and net amounts
+- **Annual Tax Packages**: Formatted for your accountant or tax advisor
+- **ELSTER-ready data** (Germany): Export structured data compatible with German tax filing
+- **Custom Financial Reports**: Monthly P&L, quarterly cash flow, annual overviews
+
+### 🔗 Third-Party System Integration
+
+DocuClaw generates and submits data in the exact format required by external systems:
+
+| System Type | Examples | What DocuClaw Generates |
+|---|---|---|
+| **Accounting Software** | DATEV, Xero, QuickBooks, Lexware | Booking entries, invoice records, expense imports |
+| **ERP Systems** | SAP, Odoo, ERPNext | Structured purchase orders, vendor records |
+| **Government Portals** | ELSTER (DE), HMRC (UK), IRS (US) | Tax declarations, compliance reports |
+| **Banking Platforms** | SWIFT, SEPA | Payment instructions, reconciliation data |
+| **CRM Systems** | Salesforce, HubSpot | Contract metadata, vendor information |
+
+All data stays local until **you** decide to export or submit. DocuClaw generates the output — you control when and where it goes.
+
+---
+
 ## 🗺️ Roadmap
 
 - [x] **Milestone 1**: Core schema, storage engine, parser framework, CLI skeleton
