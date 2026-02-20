@@ -287,6 +287,7 @@ All data stays local until **you** decide to export or submit. DocuClaw generate
 
 ## 🗺️ Roadmap
 
+**Phase 1 - Core Foundations (Completed)**
 - [x] **Milestone 1**: Core schema, storage engine, parser framework, CLI skeleton
 - [x] **Milestone 2**: Email ingestion adapter (IMAP/POP3)
 - [x] **Milestone 3**: Real multimodal LLM integration (Ollama, OpenAI Vision)
@@ -294,6 +295,14 @@ All data stays local until **you** decide to export or submit. DocuClaw generate
 - [x] **Milestone 5**: GoBD-compliant audit trail with hash chains
 - [x] **Milestone 6**: Multi-entity permission model & team collaboration
 - [x] **Milestone 7**: Webhook & API ingestion endpoints
+
+**Phase 2 - Advanced Search, Global Parsers & Sync (Upcoming)**
+- [ ] **Milestone 8**: Full CLI Capabilities & Document Search Engine (Fast semantic/full-text search)
+- [ ] **Milestone 9**: Expanded Parser Ecosystem (US Retail, CN Fapiao, FR Invoices, Plugins)
+- [ ] **Milestone 10**: RAG & "Chat with your Documents" (Local embeddings)
+- [ ] **Milestone 11**: End-to-End Encryption (E2EE) at Rest (PGP/AES-GCM)
+- [ ] **Milestone 12**: Sync and Multi-Device Support (Zero-cloud syncing via Git/Syncthing)
+- [ ] **Milestone 13**: Export & Integrations (CSV, DATEV, Xero, QuickBooks, Tax Reports)
 
 ---
 
