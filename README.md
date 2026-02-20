@@ -287,7 +287,9 @@ All data stays local until **you** decide to export or submit. DocuClaw generate
 
 ## 🗺️ Roadmap
 
-**Phase 1 - Core Foundations (Completed)**
+Our vision for DocuClaw is to become the ultimate **Sovereign Data Hub** for your personal and business documents. Here is what we are building next:
+
+### Phase 1: Core Engine & Expanded Parsers (Current)
 - [x] **Milestone 1**: Core schema, storage engine, parser framework, CLI skeleton
 - [x] **Milestone 2**: Email ingestion adapter (IMAP/POP3)
 - [x] **Milestone 3**: Real multimodal LLM integration (Ollama, OpenAI Vision)
@@ -295,14 +297,29 @@ All data stays local until **you** decide to export or submit. DocuClaw generate
 - [x] **Milestone 5**: GoBD-compliant audit trail with hash chains
 - [x] **Milestone 6**: Multi-entity permission model & team collaboration
 - [x] **Milestone 7**: Webhook & API ingestion endpoints
+- [ ] **Multi-Country Parser Ecosystem:** Specialized extraction logic for highly-bureaucratic regions:
+  - 🇩🇪 Germany (e.g., Steuerbescheid, GoBD compliance considerations)
+  - 🇫🇷 France (e.g., CAF, URSSAF, CPAM documents)
+  - 🇮🇹 Italy (e.g., Raccomandata, Fattura Elettronica)
+  - 🇪🇸 Spain, 🇺🇸 United States (Medical bills, IRS notices), 🇯🇵 Japan (Hanko documents).
+- [ ] **Advanced OCR Pipeline:** Better layout recognition for complex tabular data (e.g., invoices).
 
-**Phase 2 - Advanced Search, Global Parsers & Sync (Upcoming)**
-- [ ] **Milestone 8**: Full CLI Capabilities & Document Search Engine (Fast semantic/full-text search)
-- [ ] **Milestone 9**: Expanded Parser Ecosystem (US Retail, CN Fapiao, FR Invoices, Plugins)
-- [ ] **Milestone 10**: RAG & "Chat with your Documents" (Local embeddings)
-- [ ] **Milestone 11**: End-to-End Encryption (E2EE) at Rest (PGP/AES-GCM)
-- [ ] **Milestone 12**: Sync and Multi-Device Support (Zero-cloud syncing via Git/Syncthing)
-- [ ] **Milestone 13**: Export & Integrations (CSV, DATEV, Xero, QuickBooks, Tax Reports)
+### Phase 2: Omnichannel Ingestion (Meeting data where it lives)
+- [ ] **Seamless Email Integration:** 
+  - One-click OAuth for **Gmail**, **Outlook**, and **iCloud**.
+  - Standard **IMAP support** for privacy-focused providers (ProtonMail) and regional giants (GMX, Web.de).
+- [ ] **Native OS & Media Sync:**
+  - **Apple Photos Integration:** Auto-import receipts and documents directly from your macOS/iOS photo library.
+  - **Local Watchdogs:** Auto-process files dropped into specific local folders (perfect for network scanners).
+
+### Phase 3: Pluggable AI Engines (Bring Your Own Brain)
+- [ ] **Cloud AI Integration:** Easy API key setup for OpenAI (GPT-4o), Anthropic (Claude), and Google (Gemini).
+- [ ] **Local-First LLMs:** Out-of-the-box support for local inference engines like **Ollama** and **LM Studio**. Process highly sensitive documents (like medical records) completely offline.
+
+### Phase 4: Automated Export Workflows (The Data Router)
+- [ ] **Calendar & Tasks:** Automatically push deadlines (e.g., invoice due dates) to **Google Calendar, Apple iCal, or Todoist**.
+- [ ] **Tax & Accounting Sync:** Export parsed financial data to tools like **DATEV, Lexoffice, SevDesk** (EU), or **QuickBooks** (US).
+- [ ] **Knowledge Base Integrations:** Seamlessly sync structured Markdown data into **Obsidian** or **Notion** for your Second Brain.
 
 ---
 

@@ -71,6 +71,40 @@ status: pending
 
 ---
 
+## 🗺️ Roadmap
+
+La nostra visione per DocuClaw è di diventare il \*\*Data Hub Sovrano\*\* definitivo per i tuoi documenti personali e aziendali. Ecco cosa stiamo costruendo:
+
+### Fase 1: Motore Centrale e Parsers (Attuale)
+- [x] **Traguardo 1**: Schema centrale, motore di archiviazione, framework, CLI
+- [x] **Traguardo 2**: Adattatore di ingestione Email (IMAP/POP3)
+- [x] **Traguardo 3**: Integrazione LLM multimodale (Ollama, OpenAI Vision)
+- [x] **Traguardo 4**: Dashboard Web (solo locale, no cloud)
+- [x] **Traguardo 5**: Tracciamento audit Hash-chain compatibile con GoBD
+- [x] **Traguardo 6**: Modello permessi Multi-entità e collaborazione
+- [x] **Traguardo 7**: Endpoint Ingestione API e Webhook
+- [ ] **Ecosistema multi-paese:** Logica di estrazione specializzata per varie regioni:
+  - 🇩🇪 Germania (es. Steuerbescheid, requisiti GoBD)
+  - 🇫🇷 Francia (es. documenti CAF, URSSAF, CPAM)
+  - 🇮🇹 Italia (es. Raccomandata, Fattura Elettronica)
+  - 🇪🇸 Spagna, 🇺🇸 Stati Uniti (fatture mediche, avvisi IRS), 🇯🇵 Giappone (documenti Hanko).
+- [ ] **Pipeline OCR Avanzata:** Migliore riconoscimento per dati tabulari complessi.
+
+### Fase 2: Ingestione Omnicanale
+- [ ] **Integrazione Email senza sforzi:** One-click OAuth (Gmail, Outlook) e supporto IMAP completo (ProtonMail, GMX).
+- [ ] **Sincronizzazione di Sistema nativa:** Auto-importazione da Apple Photos e Watchdog di cartelle su computer desktop e scanner.
+
+### Fase 3: Motori IA Pluggabili
+- [ ] **Integrazione Cloud IA:** Configurazione API Keys (OpenAI, Anthropic, Gemini).
+- [ ] **Local-First LLM:** Supporto pronto all'uso per motori offline locali come **Ollama** e **LM Studio** per documenti sensibili.
+
+### Fase 4: Flussi di esportazione automatizzata
+- [ ] **Calendario e Attività:** Date di scadenza fatture su Todoist/Calendari.
+- [ ] **Integrazione Fiscale:** Esportazione per **DATEV, Lexoffice, SevDesk** e **QuickBooks**.
+- [ ] **Sincronizzazione Markdown:** Esportazione nativa verso ecosistemi come **Obsidian** e **Notion**.
+
+---
+
 ## 📄 Licenza
 
 Rilasciato sotto licenza [MIT License](LICENSE). Usalo liberamente. Sii padrone dei tuoi dati.

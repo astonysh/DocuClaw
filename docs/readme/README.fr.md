@@ -75,6 +75,44 @@ tags: [Infrastucture_IT, Depenses_Q1]
 
 ---
 
+## 🗺️ Feuille de Route (Roadmap)
+
+Notre vision pour DocuClaw est de devenir le \*\*Hub de Données Souverain\*\* ultime pour vos documents personnels et professionnels. Voici ce que nous construisons ensuite :
+
+### Phase 1 : Moteur Central & Analyseurs Étendus (Actuel)
+- [x] **Jalon 1**: Schéma de base, moteur de stockage, framework d'analyseurs, squelette CLI
+- [x] **Jalon 2**: Adaptateur d'ingestion d'e-mails (IMAP/POP3)
+- [x] **Jalon 3**: Intégration LLM multimodale réelle (Ollama, OpenAI Vision)
+- [x] **Jalon 4**: Tableau de bord Web (local uniquement, sans cloud)
+- [x] **Jalon 5**: Piste d'audit de chaîne de hachage (Hash chains) conforme aux normes GoBD
+- [x] **Jalon 6**: Modèle de permission multi-entités et collaboration en équipe
+- [x] **Jalon 7**: Points de terminaison d'ingestion Webhook & API
+- [ ] **Écosystème multi-pays d'Extracteurs (Parsers) :** Logique d'extraction spécialisée pour les régions très bureaucratiques :
+  - 🇩🇪 Allemagne (ex. Steuerbescheid, considérations de conformité GoBD)
+  - 🇫🇷 France (ex. documents CAF, URSSAF, CPAM)
+  - 🇮🇹 Italie (ex. Raccomandata, Fattura Elettronica)
+  - 🇪🇸 Espagne, 🇺🇸 États-Unis (factures médicales, avis IRS), 🇯🇵 Japon (documents Hanko).
+- [ ] **Pipeline OCR avancé :** Meilleure reconnaissance de la mise en page pour les données tabulaires complexes (par exemple, les factures).
+
+### Phase 2 : Ingestion Omnicanal
+- [ ] **Intégration d'e-mails fluide :**
+  - OAuth en un clic pour **Gmail**, **Outlook** et **iCloud**.
+  - **Prise en charge IMAP** standard pour les fournisseurs soucieux de la confidentialité (ProtonMail) et les géants régionaux (GMX, Web.de).
+- [ ] **OS Natif et Synchronisation de Médias :**
+  - **Intégration d'Apple Photos :** Importation automatique de reçus et documents directement depuis votre bibliothèque de photos macOS/iOS.
+  - **Chiens de Garde Locaux :** Traitement automatique de fichiers déposés dans des dossiers locaux spécifiques (parfait pour les scanners en réseau).
+
+### Phase 3 : Moteurs IA Pluggables (Apportez votre propre cerveau)
+- [ ] **Intégration de l'IA Cloud :** Configuration facile de la clé API pour OpenAI (GPT-4o), Anthropic (Claude) et Google (Gemini).
+- [ ] **LLM 'Local-First' :** Prise en charge immédiate des moteurs d'inférence locale comme **Ollama** et **LM Studio**. Traitez des documents très sensibles de manière complètement hors ligne.
+
+### Phase 4 : Flux d'exportation automatisés (Routage des Données)
+- [ ] **Calendrier et Tâches :** Transférez automatiquement les dates limites (par exemple, la date d'échéance de la facture) sur **Google Calendar, Apple iCal, ou Todoist**.
+- [ ] **Synchronisation fiscale et comptable :** Exportez les données financières analysées vers des outils tels que **DATEV, Lexoffice, SevDesk** (UE) ou **QuickBooks** (États-Unis).
+- [ ] **Intégrations à la base de connaissances :** Synchronisez sans problème les données Markdown structurées avec **Obsidian** ou **Notion** pour votre deuxième cerveau.
+
+---
+
 ## 📄 Licence
 
 Sous licence [MIT License](LICENSE). Utilisez-le librement. Soyez maître de vos données.

@@ -71,6 +71,44 @@ status: pending
 
 ---
 
+## 🗺️ Hoja de Ruta (Roadmap)
+
+Nuestra visión para DocuClaw es convertirnos en el \*\*Centro de Datos Soberano\*\* definitivo para tus documentos personales y empresariales. A continuación te presentamos lo que estamos construyendo:
+
+### Fase 1: Motor Central y Parsers Expandidos (Actual)
+- [x] **Hito 1**: Esquema central, motor de almacenamiento, framework de parsers, esqueleto CLI
+- [x] **Hito 2**: Adaptador de ingesta de email (IMAP/POP3)
+- [x] **Hito 3**: Integración real de LLM multimodal (Ollama, OpenAI Vision)
+- [x] **Hito 4**: Panel Web de gestión (solo local, sin nube)
+- [x] **Hito 5**: Pista de auditoría de cadena de hashes (hash chains) compatible con GoBD
+- [x] **Hito 6**: Modelo de permisos multientidad y colaboración en equipo
+- [x] **Hito 7**: Endpoints de ingesta API y Webhook
+- [ ] **Ecosistema de Parsers Multinación:** Lógica de extracción especializada para regiones altamente burocráticas:
+  - 🇩🇪 Alemania (ej. Steuerbescheid, consideraciones de cumplimiento GoBD)
+  - 🇫🇷 Francia (ej. documentos CAF, URSSAF, CPAM)
+  - 🇮🇹 Italia (ej. Raccomandata, Fattura Elettronica)
+  - 🇪🇸 España, 🇺🇸 Estados Unidos (facturas médicas, avisos del IRS), 🇯🇵 Japón (documentos Hanko).
+- [ ] **Proceso OCR Avanzado:** Reconocimiento de diseño mejorado para datos tabulares complejos (como facturas).
+
+### Fase 2: Ingesta Omnicanal (Sincronización donde residen los datos)
+- [ ] **Integración de Email sin Ficciones:**
+  - OAuth de un solo clic para **Gmail**, **Outlook** y **iCloud**.
+  - **Soporte IMAP** estándar para proveedores enfocados en la privacidad (ProtonMail) y gigantes regionales (GMX, Web.de).
+- [ ] **Sincronización Nativa de Sistema Operativo y Multimedia:**
+  - **Integración con Apple Photos:** Importación automática de recibos y documentos directamente desde tu biblioteca de fotos en macOS/iOS.
+  - **Watchdogs Locales:** Autoprocesamiento de archivos soltados en directorios locales específicos (ideal para escáneres de red).
+
+### Fase 3: Motores de IA Enchufables (Trae tu Propio Cerebro)
+- [ ] **Integración de IA en la Nube:** Configuración sencilla de claves API para OpenAI (GPT-4o), Anthropic (Claude) y Google (Gemini).
+- [ ] **LLMs con Enfoque Local Primero (Local-First):** Soporte inmediato para motores de inferencia local como **Ollama** y **LM Studio**. Procesa documentos extremadamente sensibles (como historias clínicas) de manera totalmente aislada y sin conexión.
+
+### Fase 4: Flujos de Exportación Automatizada (El Enrutador de Datos)
+- [ ] **Calendario y Tareas:** Sincronización automática de fechas límite (ej. fechas de vencimiento de facturas) hacia **Google Calendar, Apple iCal o Todoist**.
+- [ ] **Sincronización de Contabilidad y Fiscalidad:** Exportación de datos financieros extraídos a herramientas como **DATEV, Lexoffice, SevDesk** (UE) o **QuickBooks** (US).
+- [ ] **Integración con Bases de Conocimiento:** Sincronización ininterrumpida de información Markdown estructurada hacia **Obsidian** o **Notion** para conformar tu Segundo Cerebro.
+
+---
+
 ## 📄 Licencia
 
 Publicado bajo la licencia [MIT License](LICENSE). Úsalo libremente. Sé el dueño de tus datos.

@@ -181,13 +181,39 @@ class USReceiptParser(BaseDocumentParser):
 
 ## 🗺️ 路线图
 
+我们对 DocuClaw 的愿景是成为您个人和业务文档的终极**主权数据中心 (Sovereign Data Hub)**。以下是我们接下来的构建计划：
+
+### 第一阶段：核心引擎与扩展解析器（当前）
 - [x] **里程碑 1**: 核心架构、存储引擎、解析器框架、命令行骨架
-- [ ] **里程碑 2**: 邮件接入适配器 (IMAP/POP3)
-- [ ] **里程碑 3**: 真实的多模态大模型对接 (Ollama, OpenAI Vision)
-- [ ] **里程碑 4**: Web UI 管理面板（仅限本地）
-- [ ] **里程碑 5**: 符合 GoBD 标准的哈希链审计追踪
-- [ ] **里程碑 6**: 多实体权限模型与团队协作
-- [ ] **里程碑 7**: Webhook 与 API 接收端点
+- [x] **里程碑 2**: 邮件接入适配器 (IMAP/POP3)
+- [x] **里程碑 3**: 真实的多模态大模型对接 (Ollama, OpenAI Vision)
+- [x] **里程碑 4**: Web UI 管理面板（仅限本地）
+- [x] **里程碑 5**: 符合 GoBD 标准的哈希链审计追踪
+- [x] **里程碑 6**: 多实体权限模型与团队协作
+- [x] **里程碑 7**: Webhook 与 API 接收端点
+- [ ] **多国解析器生态系统:** 针对高度官僚主义地区的专用提取逻辑：
+  - 🇩🇪 德国 (例如：Steuerbescheid 缴税凭证、GoBD 合规考量)
+  - 🇫🇷 法国 (例如：CAF、URSSAF、CPAM 文档)
+  - 🇮🇹 意大利 (例如：Raccomandata、Fattura Elettronica)
+  - 🇪🇸 西班牙，🇺🇸 美国 (医疗账单、IRS 通知)，🇯🇵 日本 (Hanko 印章文档)。
+- [ ] **高级 OCR 管道:** 针对复杂表格数据（如发票）提供更好的布局识别。
+
+### 第二阶段：全渠道接入（在数据产生的地方对接）
+- [ ] **无缝邮件集成:** 
+  - 为 **Gmail**、**Outlook** 和 **iCloud** 提供一键式 OAuth 授权。
+  - 标准 **IMAP 支持** 适用于注重隐私的提供商 (ProtonMail) 和区域巨头 (GMX, Web.de)。
+- [ ] **原生系统与媒体同步:**
+  - **Apple Photos 整合:** 直接从 macOS/iOS 照片库自动导入收据和文档。
+  - **本地监听器 (Watchdogs):** 自动处理拖入特定本地文件夹的文件（完美适配网络扫描仪）。
+
+### 第三阶段：可插拔的 AI 引擎（带上你自己的大脑）
+- [ ] **云端 AI 集成:** 轻松配置 OpenAI (GPT-4o)、Anthropic (Claude) 和 Google (Gemini) 的 API 密钥。
+- [ ] **本地优先的 LLM:** 开箱即用支持 **Ollama** 和 **LM Studio** 等本地推理引擎，完全离线处理高度机密的文档（如医疗记录）。
+
+### 第四阶段：自动化导出工作流（数据路由器）
+- [ ] **日历与任务:** 自动将截止日期（如发票到期日）推送到 **Google Calendar，Apple iCal，或 Todoist**。
+- [ ] **税务与会计同步:** 将解析出来的财务数据汇出到 **DATEV、Lexoffice、SevDesk** (欧盟) 或 **QuickBooks** (美国)。
+- [ ] **知识库集成:** 将结构化 Markdown 数据无缝同步进 **Obsidian** 或 **Notion**，建立“第二大脑”。
 
 ---
 
