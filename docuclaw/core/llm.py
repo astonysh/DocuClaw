@@ -48,7 +48,7 @@ class OllamaExtractor(MultimodalExtractor):
     def __init__(self, model: str = "llava"):
         self.model = model
         try:
-            import ollama  # type: ignore
+            import ollama
             self.client = ollama
         except ImportError as e:
             raise ImportError("Please install ollama package: pip install ollama") from e
@@ -77,7 +77,7 @@ class OpenAIExtractor(MultimodalExtractor):
     def __init__(self, model: str = "gpt-4o", api_key: str | None = None):
         self.model = model
         try:
-            from openai import OpenAI  # type: ignore
+            from openai import OpenAI
             self.client = OpenAI(api_key=api_key or os.getenv("OPENAI_API_KEY"))
         except ImportError as e:
             raise ImportError("Please install openai package: pip install openai") from e
